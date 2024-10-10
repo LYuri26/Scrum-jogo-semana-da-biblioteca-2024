@@ -7,7 +7,6 @@ const pontuacoesCategorias = [
 // Variáveis para armazenar a pontuação de cada categoria de livro
 let pontuacaoFantasia = 0;          // Fantasia
 let pontuacaoFiccaoCientifica = 0;  // Ficção Científica / Distopia
-
 // Vetor de pontuação para cada pergunta com pesos diferentes (baseados na quantidade de livros relacionados)
 const pergunta1 = [5, 3];  // Pergunta 1
 const pergunta2 = [3, 4];  // Pergunta 2
@@ -15,41 +14,29 @@ const pergunta2 = [3, 4];  // Pergunta 2
 // Função para calcular a pontuação com base nas respostas do questionário
 function calcularPontuacao() {
   // Itera sobre todas as perguntas (de 1 a 8)
-  for (let i = 1; i <= 2; i++) {
-    // Seleciona a resposta marcada para a pergunta atual
-    const respostaSelecionada = document.querySelector(
-      `input[name="q${i}"]:checked`
-    );
+  for (let i = 1; i <= 8; i++) {
+    const respostaSelecionada = document.querySelector(`input[name="q${i}"]:checked`);
 
     // Se há uma resposta selecionada
     if (respostaSelecionada) {
-      // Obtém o valor da resposta (A, B, C, etc.)
       const valorResposta = respostaSelecionada.value;
-
-      // Encontra o índice da resposta (A = 0, B = 1, C = 2, etc.)
       const indiceResposta = "ABCDEFG".indexOf(valorResposta);
 
-      // Obtém a categoria correspondente à resposta selecionada
-      const categoria = pontuacoesCategorias[indiceResposta];
-
-      // Adiciona a pontuação da resposta à categoria correspondente
-      switch (categoria) {
-        case "Fantasia":
-          pontuacaoFantasia += obterPontuacaoPorPergunta(i, indiceResposta);
-          break;
-        case "Ficção Científica / Distopia":
-          pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(i, indiceResposta);
-          break;
+      // Atualiza a pontuação de acordo com a resposta
+      switch (indiceResposta) {
+        case 0: pontuacaoFantasia += obterPontuacaoPorPergunta(i, indiceResposta); break; // Fantasia
+        case 1: pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(i, indiceResposta); break; // Ficção Científica
       }
-    }
+    }  
   }
 
-  // Retorna a pontuação calculada para cada categoria (se necessário)
-  return {
-    Fantasia: pontuacaoFantasia,
-    "Ficção Científica / Distopia": pontuacaoFiccaoCientifica,
-  };
+  // Retorna um vetor com a pontuação final de cada categoria
+  return [
+    pontuacaoFantasia,                // 0: Fantasia
+    pontuacaoFiccaoCientifica,        // 1: Ficção Científica / Distopia
+  ];
 }
+
 
 // Função que retorna a pontuação de uma resposta para uma pergunta específica
 function obterPontuacaoPorPergunta(perguntaNumero, indiceResposta) {
@@ -57,6 +44,7 @@ function obterPontuacaoPorPergunta(perguntaNumero, indiceResposta) {
     case 1:
       return pergunta1[indiceResposta];
     case 2:
+      return pergunta2[indiceResposta];
     default:
       return 0;
   }
