@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+:root {
+  --cor-primaria: #873B33; /* Cor primária */
+  --cor-secundaria: #E9764E; /* Cor secundária */
+  --cor-fundo: #D9B89C; /* Cor de fundo */
+  --cor-texto: #09090B; /* Cor do texto */
+  --fonte-principal: "Goudy Bookletter 1911", serif; /* Fonte principal */
+}
+
+
+/* Personalização do Cabeçalho */
+header {
+  background-color: var(--cor-fundo); /* Bootstrap primary color */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Estilo para o Conteúdo Principal */
+.container {
+  max-width: 800px;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+}
+
+.card img {
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para a Lista de Curiosidades */
+.card ul {
+  padding-left: 0;
+}
+
+.card ul li {
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.card ul li::before {
+  content: "\2022";
+  color: #007bff; /* Bootstrap primary color */
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+/* Estilo do Rodapé */
+footer {
+  background-color: var(--cor-secundaria); /* Bootstrap dark color */
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}

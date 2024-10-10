@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biblioteca Senai - Descubra Seu Livro da Semana</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+        <!-- Bootstrap CSS (carregamento otimizado) -->
+        <link rel="preload"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                rel="stylesheet">
+        </noscript>
+
+        <!-- Custom CSS (carregamento otimizado) -->
+        <link rel="preload" href="./css/index.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="./css/index.css">
+        </noscript>
+    </head>
+
+    <body>
+        <!-- Vídeo de fundo -->
+        <video id="background-video" autoplay muted loop>
+            <source src="./video/lofi.mp4" type="video/mp4">
+            <source src="./video/lofi.webm" type="video/webm">
+        </video>
+
+        <!-- Cabeçalho -->
+        <header>
+            <div class="left-column">
+            </div>
+            <div class="middle-column">
+                <h1 class="text">Biblioteca Virtual</h1>
+            </div>
+            <div class="right-column">
+                <a href="./html/creditos.html" class="btn-light">Créditos</a>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main id="bemVindoContainer" class="container text-center">
+            <h1> <strong>Bem-vindo ao Jogo de Descoberta de Livros da Biblioteca
+                    Senai!</strong> </h1>
+            <p><strong>📚 Se você chegou até aqui, é porque ama mergulhar em
+                    novas aventuras literárias! Que tal descobrir qual livro
+                    será seu fiel companheiro esta semana? Temos uma seleção
+                    incrível, repleta de mistérios, romances e fantasias que vão
+                    prender sua atenção. Prepare-se para uma jornada
+                    inesquecível! 🌟</strong> </p>
+            <a href="./html/perguntas.html">
+                <button class="btn btn-iniciar">Iniciar Jogo</button>
+            </a>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="text-center mt-4">
+            <p>Aplicação web desenvolvida pela MELHOR turma de Informática para
+                Internet 2024 Trilhas de Futuro 4 SENAI-MG Uberaba</p>
+            <p>Instrutor: Lenon Yuri</p>
+        </footer>
+
+        <!-- Scripts (Opcional: caso precise adicionar JavaScript no futuro) -->
+        <!-- <script src="script.js"></script> -->
+
+    </body>
+
+</html>

@@ -1,0 +1,340 @@
+/*cores #873B33 vermelho /  #09090B black /  #D9B89C bege / #E9764E laranja /  #4A5250 cinza */
+
+/*botao
+ 
+//css
+button {
+  outline: none;
+  color: #873B33;
+  font-weight: bold;
+  padding: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  border: 3px dashed #873B33;
+  border-radius: 5px;
+  background-color: #EADDCA;
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+}
+
+button:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.botaoAnterior 
+
+video:
+
+video 1: https://moewalls.com/pixel-art/lofi-girl-reading-book-while-its-raining-outside-pixel-live-wallpaper/
+
+video 2:https://moewalls.com/pixel-art/autumn-river-pixel-live-wallpaper/
+
+video 3:https://moewalls.com/pixel-art/autumn-river-pixel-live-wallpaper/
+
+video 4:https://moewalls.com/pixel-art/aspen-lake-pixel-live-wallpaper/#google_vignette
+
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+
+*/
+:root {
+  --cor-primaria: #873B33;/* Cor primária */
+  --cor-secundaria: #E9764E; /* Cor secundária */
+  --cor-fundo: #D9B89C; /* Cor de fundo */
+  --cor-texto: #09090B; /* Cor do texto */
+  --fonte-principal: "Goudy Bookletter 1911", serif; /* Fonte principal */
+}
+
+body {
+  font-family: var(--fonte-principal);
+  color: #D9B89C;
+  background-color: var(--cor-fundo);
+  padding-top: 60px;
+  margin: 0;
+}
+
+.btn-light {
+  outline: none; /* Remove outline padrão */
+  color: #EADDCA;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 0.8em 2em; /* Diminuindo ainda mais o padding */
+  border: 2px dashed #EADDCA; /* Diminuindo a espessura da borda */
+  border-radius: 5px;
+  background-color: #873B33;
+  box-shadow: 0 0 0 4px #873B33, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+
+  /* Sem position absolute */
+  margin-top: auto; /* Empurra o botão para o final do header */
+  margin-bottom: 10px; /* Distância da parte inferior */
+}
+
+.btn-light:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-light:hover {
+  background-color: #EADDCA; 
+  color: #873B33;              
+  border-color: #873B33;
+}
+
+.btn-light:focus {
+  outline: none;  /* Remove a borda azul */
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
+}
+
+
+
+
+.btn-iniciar {
+  outline: none; /* Remove outline padrão */
+  color: #873B33;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 1em 4em; /* Diminuindo ainda mais o padding */
+  border: 3px dashed #873B33; /* Diminuindo a espessura da borda */
+  border-radius: 5px;
+  background-color: #EADDCA;
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+}
+
+.btn-iniciar:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-iniciar:hover {
+  background-color: #873B33; 
+  color: #ffffff;              
+  border-color: #333;      
+}
+
+/* Remove o outline azul no clique (foco) */
+.btn-iniciar:focus {
+  outline: none;  /* Remove a borda azul */
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
+}
+
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+header {
+  background-color: rgba(135, 59, 51, 0.5); /* Cor #873B33 com 80% de opacidade */
+  backdrop-filter: blur(10px);
+  color: var(--cor-fundo);
+  padding: 1rem 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  display: flex; /* Flexbox para o layout em 3 colunas */
+  justify-content: space-between; /* Espaça as colunas, será alterado abaixo */
+  align-items: center; /* Centraliza os itens verticalmente */
+  height: 100px; /* Altura do header */
+  padding: 0 20px; /* Padding lateral para ajustar os conteúdos */
+}
+
+header .left-column,
+header .middle-column,
+header .right-column {
+  flex: 1; /* As três colunas têm o mesmo tamanho */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+header .left-column {
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+header .right-column {
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+}
+
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+}
+
+header nav a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+#bemVindoContainer {
+  display: flex; /* Adiciona flexbox */
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  margin-top: 130px;
+  margin-bottom: 50px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 400px;
+  text-align: center; /* Adiciona esta linha para centralizar o texto */
+}
+
+#bemVindoContainer h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#bemVindoContainer p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+#bemVindoContainer button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(233, 118, 78, 0.4); 
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  header {
+    height: 80px; /* Aumenta a altura do header */
+    display: flex;
+    align-items: center; /* Alinha o conteúdo do header verticalmente */
+    justify-content: space-between; /* Espaça os itens do header */
+    padding: 0 20px; /* Adiciona padding lateral ao header */
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  #bemVindoContainer {
+    display: flex;
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    max-width: 800px; /* Define uma largura máxima */
+    height: calc(65vh - 80px - 60px); /* Ajusta a altura para 65% da viewport menos a altura do header e o espaço para o footer */
+    margin: 60px auto; /* Margem superior de 60px e inferior de 40px */
+    padding: 20px; /* Ajusta o padding */
+    box-sizing: border-box; /* Inclui o padding e a borda na altura total */
+  }
+
+  #bemVindoContainer h1 {
+    font-size: 2rem;
+  }
+
+  #bemVindoContainer p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do parágrafo */
+  }
+
+  button {
+    padding: 0.7em 2em;
+    font-size: 16px;
+    margin-top: 20px; /* Adiciona espaçamento acima do botão */
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: flex ;
+    flex-direction: column ; /* Alinha os itens em coluna */
+    align-items: center ; /* Centraliza horizontalmente */
+    justify-content: center ; /* Centraliza verticalmente */
+    padding: 60px 0 ; /* Adiciona padding para garantir espaço ao redor */
+    text-align: center ; /* Centraliza o conteúdo textual */
+    background-color: rgba(135, 59, 51, 0.8) ; /* Ajuste no fundo, caso esteja sendo sobrescrito */
+  }
+
+  header h1 {
+    font-size: 2.3rem ;
+    margin-bottom: 15px ; /* Espaço entre o título e o botão */
+  }
+
+  .btn-light {
+    font-size: 14px ; /* Tamanho do texto do botão */
+    padding: 10px 20px ; /* Padding do botão para aumentar o espaço */
+    text-align: center ; /* Centraliza o texto dentro do botão */
+    align-self: center ; /* Centraliza o botão no layout */
+    display: inline-block ; /* Garante que o botão mantenha seu tamanho natural */
+  }
+
+  #bemVindoContainer {
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: flex-start ;
+    max-width: 90% ;
+    min-height: calc(85vh - 80px - 60px) ; /* Ajusta a altura para conter o conteúdo */
+    margin: 60px auto ;
+    padding: 15px ;
+    box-sizing: border-box ;
+  }
+
+  #bemVindoContainer h1 {
+    font-size: 2rem ;
+    margin-bottom: 20px ;
+    text-align: center ;
+  }
+
+  #bemVindoContainer p {
+    font-size: 1.4rem ;
+    margin-bottom: 20px ;
+    text-align: center ;
+  }
+
+  button {
+    padding: 0.5em 1.5em ;
+    font-size: 14px ;
+    margin-top: 20px ;
+    align-self: center ; /* Centraliza o botão */
+  }
+}
