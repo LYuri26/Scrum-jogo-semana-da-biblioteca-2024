@@ -1,0 +1,190 @@
+Instruções de Tarefas para o Projeto
+Testes de Páginas HTML
+Leandra
+
+Páginas a serem testadas:
+
+    html/livros/avatar.html
+    html/livros/bird-box.html
+    html/livros/dexter.html
+    html/livros/harry-potter.html
+
+Atividades a serem realizadas:
+
+    Validação do HTML: Verifique se todas as tags estão corretamente fechadas e se a estrutura do documento está adequada.
+    Funcionalidade: Teste cada página para garantir que todos os links, botões e interações funcionem como esperado.
+    Responsividade: Confira como as páginas se comportam em diferentes tamanhos de tela e dispositivos.
+    Erros e Sugestões: Documente qualquer erro encontrado ou melhorias que possam ser implementadas.
+
+João Paulo
+
+Páginas a serem testadas:
+
+    html/livros/hyde.html
+    html/livros/lua-nova.html
+    html/livros/o-lado-bom-da-vida.html
+    html/livros/o-visitante-inesperado.html
+    html/livros/vermelho-branco.html
+
+Atividades a serem realizadas:
+
+    Validação do HTML: Verifique se todas as tags estão corretamente fechadas e se a estrutura do documento está adequada.
+    Funcionalidade: Teste cada página para garantir que todos os links, botões e interações funcionem como esperado.
+    Responsividade: Confira como as páginas se comportam em diferentes tamanhos de tela e dispositivos.
+    Erros e Sugestões: Documente qualquer erro encontrado ou melhorias que possam ser implementadas.
+
+Criação e Estruturação das Perguntas
+Bianca e Igor
+
+Atividades a serem realizadas:
+
+    Criação das Perguntas:
+        Elaborem perguntas claras e objetivas relacionadas ao tema do nosso jogo de descoberta de livros.
+    Opções para Cada Pergunta:
+        Para cada pergunta, elaborem de 3 a 5 opções de resposta, incluindo um valor associado a cada opção.
+
+Exemplo:
+
+    Pergunta: Qual gênero literário você prefere?
+    Opções:
+        Mistério (valor: 10)
+        Romance (valor: 20)
+        Ficção Científica (valor: 30)
+        Fantasia (valor: 40)
+        Aventura (valor: 50)
+
+Sugestões para o Jogo:
+
+    As perguntas devem ser divertidas e imersivas, envolvendo os jogadores no universo literário.
+    Os valores associados devem fazer sentido no contexto do jogo.
+
+Documentação do Projeto
+Soraya e Ícaro
+
+Atividades a serem realizadas:
+
+    Nome Completo: Indiquem seus nomes completos.
+    Função no Projeto: Descrevam sua função principal durante o desenvolvimento (Ex.: Desenvolvedor Front-End, Designer, Gerente de Projeto, QA, etc.).
+    Contribuições Detalhadas: Descrevam as partes do projeto que desenvolveram ou supervisionaram.
+    Link para o GitHub: Adicionem o link para seus perfis e, se possível, links diretos para os commits ou pull requests relacionados ao trabalho realizado.
+    Arquivos SVG (caso aplicável): Compartilhem links dos arquivos SVG utilizados no projeto.
+
+Sistema de Navegação das Perguntas
+Yago, Paulo e Luiz Eduardo
+
+Tarefas a serem realizadas:
+
+    Validação de Campos:
+        Ajustem o sistema para que o usuário não possa avançar nas perguntas se houver campos em branco.
+        Implementem mensagens de erro ou feedback visual.
+
+    Implementação de Animações:
+        Proponham e implementem animações sutis para a transição entre as perguntas e feedback ao preencher os campos.
+
+Sugestões:
+
+    Pensem em como as animações podem enriquecer a experiência do usuário.
+
+Avaliação dos Valores e Pontos do Jogo
+Luan e Adilson Gomides Junior
+
+Tarefas a serem realizadas:
+
+    Avaliação de Pontos e Valores:
+        Discutam em equipe a distribuição de valores e pontos para cada pergunta.
+
+    Definição do Número de Perguntas:
+        Avaliem quantas perguntas serão feitas durante o jogo, considerando a duração desejada e a complexidade das perguntas.
+
+    Resultado e Redirecionamento:
+        Discutam como os pontos acumulados influenciarão o resultado final e o redirecionamento para o livro.
+
+Sugestões:
+
+    Realizem uma reunião para coletar opiniões sobre a pontuação e o número de perguntas.
+
+Instruções de Testes de Páginas HTML
+Ana Clara Alves
+
+Páginas a serem testadas:
+
+    html/livros/a-cabana.html
+    html/livros/a-queda.html
+    html/livros/a-vinganca.html
+
+Atividades a serem realizadas:
+
+    Validação do HTML
+    Funcionalidade
+    Responsividade
+    Erros e Sugestões
+
+Anna Felipe
+
+Páginas a serem testadas:
+
+    html/livros/a-volta-ao-mundo-em-80-dias.html
+    html/livros/dexter-um-assassino.html
+    html/livros/depois-silencio.html
+    html/livros/hannibal.html
+
+Atividades a serem realizadas:
+
+    Validação do HTML
+    Funcionalidade
+    Responsividade
+    Erros e Sugestões
+
+Vinicius
+
+Páginas a serem testadas:
+
+    html/livros/o-melhor-de-mim.html
+    html/livros/o-xango-de-baker-street.html
+    html/livros/um-homem-de-sorte.html
+    html/livros/viagem-ao-centro-da-terra.html
+
+Atividades a serem realizadas:
+
+    Validação do HTML
+    Funcionalidade
+    Responsividade
+    Erros e Sugestões
+
+Tatiane
+
+Páginas a serem testadas:
+
+    html/livros/querido-e-devotado-dexter.html
+    html/livros/o-visitante-inesperado.html
+    html/livros/o-lado-bom-da-vida.html
+
+Atividades a serem realizadas:
+
+    Validação do HTML
+    Funcionalidade
+    Responsividade
+    Erros e Sugestões
+
+Bruno, Gabriel da Silva Ribeiro e Davi
+
+Tarefas a serem realizadas:
+
+    Criação e Padronização do HTML: Reúnam-se com a equipe de documentação para entender as perguntas e opções que devem ser oferecidas.
+
+Instruções para Estilização da Página html/perguntas.html
+Sofia, Kauã Araujo, Kauã Francino e Pedro Lucas
+
+Atividades a serem realizadas:
+
+    Estilização do CSS
+        Estrutura Básica
+        Estilização de Botões https://www.sliderrevolution.com/resources/styling-radio-buttons/
+
+    Responsividade
+        Design Responsivo
+
+    Diretrizes de Estilo
+        Cores e Fontes
+        Espaçamento e Layout
+

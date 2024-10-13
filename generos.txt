@@ -1,42 +1,79 @@
-Fantasia
+Gêneros Literários e Livros
+1. Ficção Policial
 
-    Harry Potter e a Pedra Filosofal - J.K. Rowling
-    Percy Jackson e o Ladrão de Raios - Rick Riordan
-    O Senhor dos Anéis: A Sociedade do Anel - J.R.R. Tolkien
-    As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa - C.S. Lewis
-    O Hobbit - J.R.R. Tolkien
+    Dexter: Um Assassino
+        Autor: Jeff Lindsay
+        Descrição: Dexter Morgan é um analista forense de Miami que leva uma vida dupla como vigilante. Ele caça os que escaparam da justiça.
 
-Ficção Científica / Distopia
+    O Xangô de Baker Street
+        Autor: Jô Soares
+        Descrição: Um mistério que envolve Sherlock Holmes, que investiga o roubo de uma valiosa estátua na cidade do Rio de Janeiro.
 
-    Jogos Vorazes - Suzanne Collins
-    Divergente - Veronica Roth
-    Maze Runner: Correr ou Morrer - James Dashner
+    Hannibal
+        Autor: Thomas Harris
+        Descrição: A continuação da história de Hannibal Lecter, um psicopata brilhante e manipulador, que retorna para criar caos em Nova York.
 
-Romance
+2. Aventura
 
-    A Culpa é das Estrelas - John Green
-    Eleanor & Park - Rainbow Rowell
-    A Seleção - Kiera Cass
-    Cidades de Papel - John Green
+    A Volta ao Mundo em 80 Dias
+        Autor: Júlio Verne
+        Descrição: A história de Phileas Fogg, que aceita o desafio de dar a volta ao mundo em 80 dias, utilizando diversos meios de transporte.
 
-Drama / Realismo
+    Viagem ao Centro da Terra
+        Autor: Júlio Verne
+        Descrição: Um professor e seus companheiros embarcam em uma aventura subterrânea, descobrindo um mundo desconhecido sob a Terra.
 
-    Extraordinário - R.J. Palacio
-    O Sol é Para Todos - Harper Lee
-    Eu, Você e a Garota Que Vai Morrer - Jesse Andrews
-    Os 13 Porquês - Jay Asher
-    A Menina que Roubava Livros - Markus Zusak
+3. Literatura Espiritual
 
-Biografia / Histórico
+    A Cabana
+        Autor: William P. Young
+        Descrição: Um homem que enfrenta uma tragédia pessoal encontra Deus em uma cabana isolada, levando a uma jornada de cura e compreensão.
 
-    O Diário de Anne Frank - Anne Frank
+    Depois, Silêncio
+        Autor: Ganymédes José
+        Descrição: Uma reflexão sobre a vida, a fé e a relação do homem com o divino, explorando questões profundas de espiritualidade.
 
-Clássico
+4. Romance
 
-    O Pequeno Príncipe - Antoine de Saint-Exupéry
+    O Melhor de Mim
+        Autor: Nicholas Sparks
+        Descrição: A história de um amor que ressurge após anos, quando dois antigos amantes se reencontram e enfrentam seus passados.
 
-Fantasia / Épico
+    Um Homem de Sorte
+        Autor: Nicholas Sparks
+        Descrição: Um soldado encontra uma foto de uma mulher que o leva a procurar por ela, acreditando que ela é a responsável por sua boa sorte.
 
-    A Guerra dos Tronos - George R.R. Martin
+    O Lado Bom da Vida
+        Autor: Matthew Quick
+        Descrição: Um homem que acaba de sair de um hospital psiquiátrico busca recomeçar sua vida e entender o amor e a saúde mental.
 
-    
+5. Fantasia
+
+    Harry Potter
+        Autor: J.K. Rowling
+        Descrição: A famosa saga sobre um jovem bruxo que descobre seu passado em um mundo mágico e enfrenta o temível Lord Voldemort.
+
+    Lua Nova
+        Autor: Stephenie Meyer
+        Descrição: O segundo livro da saga Crepúsculo, onde Bella enfrenta a dor da perda e é introduzida a um mundo ainda mais complicado de vampiros e lobisomens.
+
+6. Horror
+
+    Hyde
+        Autor: Daniel Freitas
+        Descrição: Uma reinterpretação moderna da história de Dr. Jekyll e Mr. Hyde, explorando a dualidade do ser humano.
+
+    Bird Box
+        Autor: Josh Malerman
+        Descrição: Uma história de sobrevivência em um mundo pós-apocalíptico onde criaturas fazem com que as pessoas se suicidem ao serem vistas.
+
+7. Ficção Científica
+
+    Avatar
+        Baseado no filme de James Cameron
+        Descrição: Um ex-fuzileiro naval é enviado a Pandora, um mundo alienígena, onde se envolve em um conflito entre humanos e nativos.
+
+8. Outras Categorias
+
+    Não Encontrado
+        Descrição: Um livro que explora as nuances da vida e do não ser, refletindo sobre a busca por propósito e identidade.

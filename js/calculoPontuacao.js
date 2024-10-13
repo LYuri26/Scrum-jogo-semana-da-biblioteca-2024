@@ -1,34 +1,33 @@
-// Vetor que mapeia as categorias na ordem: A, B, C, D, E, F, G, H
+// Vetor que mapeia as categorias na ordem: A, B, C, D, E, F, G
 const pontuacoesCategorias = [
-  "Fantasia", // A
-  "Ficção Científica / Distopia", // B
-  "Romance", // C
-  "Misterio", // D
-  "Suspense", // E
-  "Acao", // F
-  "Drama", // G
-  "Psicologia", // H
+  "Ficção Policial", // A
+  "Aventura", // B
+  "Literatura Espiritual", // C
+  "Romance", // D
+  "Fantasia", // E
+  "Horror", // F
+  "Ficção Científica" // G
 ];
 
 // Variáveis para armazenar a pontuação de cada categoria de livro
-let pontuacaoFantasia = 0; // Fantasia
-let pontuacaoFiccaoCientifica = 0; // Ficção Científica / Distopia
+let pontuacaoFiccaoPolicial = 0; // Ficção Policial
+let pontuacaoAventura = 0; // Aventura
+let pontuacaoLiteraturaEspiritual = 0; // Literatura Espiritual
 let pontuacaoRomance = 0; // Romance
-let pontuacaoMisterio = 0; // Mistério
-let pontuacaoSuspense = 0; // Suspense
-let pontuacaoAcao = 0; // Ação
-let pontuacaoDrama = 0; // Drama
-let pontuacaoPsicologia = 0; //Psicologia
+let pontuacaoFantasia = 0; // Fantasia
+let pontuacaoHorror = 0; // Horror
+let pontuacaoFiccaoCientifica = 0; // Ficção Científica
 
-// Vetor de pontuação para cada pergunta com pesos diferentes (baseados na quantidade de livros relacionados)
-const pergunta1 = [5, 3, 7, 8]; // Pergunta 1
-const pergunta2 = [3, 4, 7, 9]; // Pergunta 2
-const pergunta3 = [3, 4, 7, 9]; // Pergunta 3
-const pergunta4 = [3, 4, 7, 9]; // Pergunta 4
-const pergunta5 = [5, 3, 7, 8]; // Pergunta 5
-const pergunta6 = [3, 4, 7, 9]; // Pergunta 6
-const pergunta7 = [3, 4, 7, 9]; // Pergunta 7
-const pergunta8 = [3, 4, 7, 9]; // Pergunta 8
+// Vetor de pontuação para cada pergunta
+const pergunta1 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 1
+const pergunta2 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 2
+const pergunta3 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 3
+const pergunta4 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 4
+const pergunta5 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 5
+const pergunta6 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 6
+const pergunta7 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 7
+const pergunta8 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 8
+
 
 // Função para calcular a pontuação com base nas respostas do questionário
 function calcularPontuacao() {
@@ -41,51 +40,44 @@ function calcularPontuacao() {
     // Se há uma resposta selecionada
     if (respostaSelecionada) {
       const valorResposta = respostaSelecionada.value;
-      const indiceResposta = "ABCDE".indexOf(valorResposta);
+      const indiceResposta = "ABCDEFG".indexOf(valorResposta); // Ajuste aqui, removendo 'H'
 
       // Atualiza a pontuação de acordo com a resposta
       switch (indiceResposta) {
+        case 0:
+          pontuacaoFiccaoPolicial += obterPontuacaoPorPergunta(i, indiceResposta);
+          break; // Ficção Policial
         case 1:
-          pontuacaoFantasia += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Fantasia
+          pontuacaoAventura += obterPontuacaoPorPergunta(i, indiceResposta);
+          break; // Aventura
         case 2:
-          pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(
-            i,
-            indiceResposta
-          );
-          break; //Ficção Científica
+          pontuacaoLiteraturaEspiritual += obterPontuacaoPorPergunta(i, indiceResposta);
+          break; // Literatura Espiritual
         case 3:
           pontuacaoRomance += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Romance
+          break; // Romance
         case 4:
-          pontuacaoMisterio += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Mistério
+          pontuacaoFantasia += obterPontuacaoPorPergunta(i, indiceResposta);
+          break; // Fantasia
         case 5:
-          pontuacaoSuspense += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Suspense
+          pontuacaoHorror += obterPontuacaoPorPergunta(i, indiceResposta);
+          break; // Horror
         case 6:
-          pontuacaoAcao += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Ação
-        case 7:
-          pontuacaoDrama += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Drama
-        case 8:
-          pontuacaoPsicologia += obterPontuacaoPorPergunta(i, indiceResposta);
-          break; //Psicologia
+          pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(i, indiceResposta);
+          break; // Ficção Científica
       }
     }
   }
 
   // Retorna um vetor com a pontuação final de cada categoria
   return [
-    pontuacaoFantasia, // 0: Fantasia
-    pontuacaoFiccaoCientifica, // 1: Ficção Científica / Distopia
-    pontuacaoRomance, // 2: Romance
-    pontuacaoMisterio, // 3: Mistério
-    pontuacaoSuspense, // 4: Suspense
-    pontuacaoAcao, // 5: Ação
-    pontuacaoDrama, // 6: Drama
-    pontuacaoPsicologia, // 7: Psicologia
+    pontuacaoFiccaoPolicial, // 0: Ficção Policial
+    pontuacaoAventura, // 1: Aventura
+    pontuacaoLiteraturaEspiritual, // 2: Literatura Espiritual
+    pontuacaoRomance, // 3: Romance
+    pontuacaoFantasia, // 4: Fantasia
+    pontuacaoHorror, // 5: Horror
+    pontuacaoFiccaoCientifica // 6: Ficção Científica
   ];
 }
 

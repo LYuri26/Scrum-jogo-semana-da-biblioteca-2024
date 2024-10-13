@@ -1,53 +1,68 @@
 // Vetores separados por categoria
 const categorias = [
-  "Fantasia",
-  "Ficção Científica / Distopia",
+  "Ficção Policial",
+  "Aventura",
+  "Literatura Espiritual",
   "Romance",
-  "Misterio",
-  "Suspense",
-  "Acao",
-  "Drama",
-  "Psicologia",
+  "Fantasia",
+  "Horror",
+  "Ficção Científica",
 ];
 
 // Pontuações para cada categoria
-const pontuacaoFantasiaTotal = [5, 14, 15, 19, 20, 24, 25, 29, 30, 34];
-const pontuacaoFiccaoCientificaTotal = [5, 16, 17, 23, 24, 30];
-const pontuacaoRomanceTotal = [];
-const pontuacaoMisterioTotal = [];
-const pontuacaoSuspenseTotal = [];
-const pontuacaoAcaoTotal = [];
-const pontuacaoDramaTotal = [];
-const pontuacaoPsicologiaTotal = [];
+const pontuacaoFiccaoPolicialTotal = [0, 0, 0]; // Exemplo de pontuação
+const pontuacaoAventuraTotal = [0, 0]; // Exemplo de pontuação
+const pontuacaoLiteraturaEspiritualTotal = [0, 0]; // Exemplo de pontuação
+const pontuacaoRomanceTotal = [0, 0, 0]; // Exemplo de pontuação
+const pontuacaoFantasiaTotal = [0, 0]; // Exemplo de pontuação
+const pontuacaoHorrorTotal = [0, 0]; // Exemplo de pontuação
+const pontuacaoFiccaoCientificaTotal = [0]; // Exemplo de pontuação
 
 // Livros recomendados por categoria
-const livrosFantasia = ["Harry Potter e a Pedra Filosofal", "Lua nova"];
-const livrosFiccaoCientifica = ["Querido e Devotado Dexter, Bird Box"];
-const livrosRomance = ["Vermelho, Branco e Sangue azul", "Nao se apega, nao"];
-const livrosMisterio = ["A queda"];
-const livrosSuspense = ["Visitante Inesperado"];
-const livrosAcao = [""];
-const livrosDrama = ["O Lado Bom da Vida"];
-const livrosPsicologia = ["Avat e Psicologia"];
+const livrosFiccaoPolicial = [
+  "Dexter: Um Assassino",
+  "O Xangô de Baker Street",
+  "Hannibal",
+];
+const livrosAventura = [
+  "A Volta ao Mundo em 80 Dias",
+  "Viagem ao Centro da Terra",
+];
+const livrosLiteraturaEspiritual = ["A Cabana", "Depois, Silêncio"];
+const livrosRomance = [
+  "O Melhor de Mim",
+  "Um Homem de Sorte",
+  "O Lado Bom da Vida",
+];
+const livrosFantasia = ["Harry Potter", "Lua Nova"];
+const livrosHorror = ["Hyde", "Bird Box"];
+const livrosFiccaoCientifica = ["Avatar"];
 
 // URLs para livros recomendados por categoria
+const urlsFiccaoPolicial = [
+  "../html/livros/dexter-um-assassino.html",
+  "../html/livros/o-xango-de-baker-street.html",
+  "../html/livros/hannibal.html",
+];
+const urlsAventura = [
+  "../html/livros/a-volta-ao-mundo-em-80-dias.html",
+  "../html/livros/viagem-ao-centro-da-terra.html",
+];
+const urlsLiteraturaEspiritual = [
+  "../html/livros/a-cabana.html",
+  "../html/livros/depois-silencio.html",
+];
+const urlsRomance = [
+  "../html/livros/o-melhor-de-mim.html",
+  "../html/livros/um-homem-de-sorte.html",
+  "../html/livros/o-lado-bom-da-vida.html",
+];
 const urlsFantasia = [
   "../html/livros/harry-potter.html",
-  "../html/livros/luanova.html",
+  "../html/livros/lua-nova.html",
 ];
-const urlsFiccaoCientifica = [
-  "../html/livros/dexter.html",
-  "../livros/birdbox.html",
-];
-const urlsRomance = ["../html/livros/vermelhobranco.html"];
-const urlsMisterio = [
-  "../html/livros/aqueda.html",
-  "../html/livros/nnaoseapeganao",
-];
-const urlsSuspense = ["../html/livros/visitanteinesperado/html"];
-const urlsAcao = [""];
-const urlsDrama = ["../html/livros/oladobomdavida"];
-const urlsPsicologia = ["../html/livros/avatarepsicologia"];
+const urlsHorror = ["../html/livros/hyde.html", "../html/livros/birdbox.html"];
+const urlsFiccaoCientifica = ["../html/livros/avatar.html"];
 
 // Função para recomendar um livro com base na pontuação calculada
 function recomendarLivro(pontuacao) {
@@ -80,29 +95,26 @@ function recomendarLivro(pontuacao) {
     let urlsCategoria = [];
 
     switch (categoriaFavorita) {
-      case "Fantasia":
-        urlsCategoria = urlsFantasia;
+      case "Ficção Policial":
+        urlsCategoria = urlsFiccaoPolicial;
         break;
-      case "Ficção Científica / Distopia":
-        urlsCategoria = urlsFiccaoCientifica;
+      case "Aventura":
+        urlsCategoria = urlsAventura;
+        break;
+      case "Literatura Espiritual":
+        urlsCategoria = urlsLiteraturaEspiritual;
         break;
       case "Romance":
         urlsCategoria = urlsRomance;
         break;
-      case "Misterio":
-        urlsCategoria = urlsMisterio;
+      case "Fantasia":
+        urlsCategoria = urlsFantasia;
         break;
-      case "Suspense":
-        urlsCategoria = urlsSuspense;
+      case "Horror":
+        urlsCategoria = urlsHorror;
         break;
-      case "Acao":
-        urlsCategoria = urlsAcao;
-        break;
-      case "Drama":
-        urlsCategoria = urlsDrama;
-        break;
-      case "Psicologia":
-        urlsCategoria = urlsPsicologia;
+      case "Ficção Científica":
+        urlsCategoria = urlsFiccaoCientifica;
         break;
       default:
         urlsCategoria = [];
@@ -111,31 +123,28 @@ function recomendarLivro(pontuacao) {
     // Agora buscamos a recomendação com base na maior pontuação
     let pontuacaoCategoria = [];
 
-    // Determina a pontuação correta para a categoria favorita (você pode usar arrays diferentes para cada categoria)
+    // Determina a pontuação correta para a categoria favorita
     switch (categoriaFavorita) {
-      case "Fantasia":
-        pontuacaoCategoria = pontuacaoFantasiaTotal;
+      case "Ficção Policial":
+        pontuacaoCategoria = pontuacaoFiccaoPolicialTotal;
         break;
-      case "Ficção Científica / Distopia":
-        pontuacaoCategoria = pontuacaoFiccaoCientificaTotal;
+      case "Aventura":
+        pontuacaoCategoria = pontuacaoAventuraTotal;
+        break;
+      case "Literatura Espiritual":
+        pontuacaoCategoria = pontuacaoLiteraturaEspiritualTotal;
         break;
       case "Romance":
         pontuacaoCategoria = pontuacaoRomanceTotal;
         break;
-      case "Misterio":
-        pontuacaoCategoria = pontuacaoMisterioTotal;
+      case "Fantasia":
+        pontuacaoCategoria = pontuacaoFantasiaTotal;
         break;
-      case "Suspense":
-        pontuacaoCategoria = pontuacaoSuspenseTotal;
+      case "Horror":
+        pontuacaoCategoria = pontuacaoHorrorTotal;
         break;
-      case "Acao":
-        pontuacaoCategoria = pontuacaoAcaoTotal;
-        break;
-      case "Drama":
-        pontuacaoCategoria = pontuacaoDramaTotal;
-        break;
-      case "Psicologia":
-        pontuacaoCategoria = pontuacaoPsicologiaTotal;
+      case "Ficção Científica":
+        pontuacaoCategoria = pontuacaoFiccaoCientificaTotal;
         break;
       default:
         pontuacaoCategoria = [];
@@ -155,15 +164,6 @@ function recomendarLivro(pontuacao) {
 
   // Redireciona para a página específica do livro recomendado
   window.location.href = urlLivroRecomendado;
-}
-
-// Função que processa o questionário e recomenda o livro
-function processarQuestionario() {
-  // Calcula a pontuação com base nas respostas
-  const pontuacao = calcularPontuacao(); // Implementação dessa função deve estar em algum lugar
-
-  // Recomenda um livro com base na pontuação
-  recomendarLivro(pontuacao);
 }
 
 // Função que processa o questionário e recomenda o livro
