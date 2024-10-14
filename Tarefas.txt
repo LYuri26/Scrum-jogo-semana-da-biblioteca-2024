@@ -21,7 +21,7 @@ João Paulo
 Páginas a serem testadas:
 
     html/livros/hyde.html
-    html/livros/lua-nova.html
+    html//lua-novlivrosa.html
     html/livros/o-lado-bom-da-vida.html
     html/livros/o-visitante-inesperado.html
     html/livros/vermelho-branco.html
@@ -173,7 +173,7 @@ Tarefas a serem realizadas:
     Criação e Padronização do HTML: Reúnam-se com a equipe de documentação para entender as perguntas e opções que devem ser oferecidas.
 
 Instruções para Estilização da Página html/perguntas.html
-Sofia, Kauã Araujo, Kauã Francino e Pedro Lucas
+Sofia, Kauã Araujo, Kauã Francino e pedro Lucas
 
 Atividades a serem realizadas:
 
@@ -188,3 +188,12 @@ Atividades a serem realizadas:
         Cores e Fontes
         Espaçamento e Layout
 
+
+
+Ajuste dos livros:
+Hannibal, sem capa Ana Clara Alves
+Hyde capa errada e nome errado Ana Clara Alves
+Lua nova sem capa Ana Victória
+Vermelho,Branco e Sangue Azul sem capa Ana Victória
+A Volta ao Mundo e Depois do silencio sem capa Ana Victória
+A Cabana,A Queda,A Vingança capa errada Ana Felipe

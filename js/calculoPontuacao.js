@@ -1,12 +1,13 @@
 // Vetor que mapeia as categorias na ordem: A, B, C, D, E, F, G
 const pontuacoesCategorias = [
-  "Ficção Policial", // A
-  "Aventura", // B
+  "Romance", // A
+  "Ficção Científica", // B
   "Literatura Espiritual", // C
-  "Romance", // D
+  "Horror", // D
   "Fantasia", // E
-  "Horror", // F
-  "Ficção Científica" // G
+  "Ficção Policial", // F
+  "Mistério", // G
+  "Aventura" // H
 ];
 
 // Variáveis para armazenar a pontuação de cada categoria de livro
@@ -17,22 +18,23 @@ let pontuacaoRomance = 0; // Romance
 let pontuacaoFantasia = 0; // Fantasia
 let pontuacaoHorror = 0; // Horror
 let pontuacaoFiccaoCientifica = 0; // Ficção Científica
+let pontuacaoMisterio = 0; //Mistério
 
 // Vetor de pontuação para cada pergunta
-const pergunta1 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 1
-const pergunta2 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 2
-const pergunta3 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 3
-const pergunta4 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 4
-const pergunta5 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 5
-const pergunta6 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 6
-const pergunta7 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 7
-const pergunta8 = [0, 0, 0, 0, 0, 0, 0]; // Pergunta 8
+const pergunta1 = [1, 3, 1, 2, 0, 0, 0]; // Pergunta 1
+const pergunta2 = [4, 2, 5, 0, 0, 0, 0]; // Pergunta 2
+const pergunta3 = [2, 1, 2, 0, 0, 0, 0]; // Pergunta 3
+const pergunta4 = [1, 4, 1, 0, 0, 0, 0]; // Pergunta 4
+const pergunta5 = [3, 2, 4, 0, 0, 0, 0]; // Pergunta 5
+const pergunta6 = [6, 1, 2, 0, 0, 0, 0]; // Pergunta 6
+const pergunta7 = [2, 6, 1, 0, 0, 0, 0]; // Pergunta 7
+const pergunta8 = [2, 2, 4, 0, 0, 0, 0]; // Pergunta 8
 
 
 // Função para calcular a pontuação com base nas respostas do questionário
 function calcularPontuacao() {
-  // Itera sobre todas as perguntas (de 1 a 8)
-  for (let i = 1; i <= 8; i++) {
+  // Itera sobre todas as perguntas (de 1 a 12)
+  for (let i = 1; i <= 12; i++) {
     const respostaSelecionada = document.querySelector(
       `input[name="q${i}"]:checked`
     );
@@ -40,7 +42,7 @@ function calcularPontuacao() {
     // Se há uma resposta selecionada
     if (respostaSelecionada) {
       const valorResposta = respostaSelecionada.value;
-      const indiceResposta = "ABCDEFG".indexOf(valorResposta); // Ajuste aqui, removendo 'H'
+      const indiceResposta = "ABCDEFGH".indexOf(valorResposta); // Ajuste aqui, removendo 'H'
 
       // Atualiza a pontuação de acordo com a resposta
       switch (indiceResposta) {
@@ -65,6 +67,9 @@ function calcularPontuacao() {
         case 6:
           pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(i, indiceResposta);
           break; // Ficção Científica
+        case 7:
+          pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(i, indiceResposta);
+        break; // Mistério
       }
     }
   }
@@ -77,7 +82,8 @@ function calcularPontuacao() {
     pontuacaoRomance, // 3: Romance
     pontuacaoFantasia, // 4: Fantasia
     pontuacaoHorror, // 5: Horror
-    pontuacaoFiccaoCientifica // 6: Ficção Científica
+    pontuacaoFiccaoCientifica, // 6: Ficção Científica
+    pontuacaoMisterio // 7. Mistério
   ];
 }
 
@@ -100,6 +106,14 @@ function obterPontuacaoPorPergunta(perguntaNumero, indiceResposta) {
       return pergunta7[indiceResposta];
     case 8:
       return pergunta8[indiceResposta];
+    case 9:
+      return pergunta9[indiceResposta];
+    case 10:
+      return pergunta10[indiceResposta];
+    case 11:
+      return pergunta11[indiceResposta];
+    case 12:
+      return pergunta12[indiceResposta]; 
     default:
       return 0;
   }

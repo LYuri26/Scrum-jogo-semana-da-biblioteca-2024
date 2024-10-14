@@ -1,12 +1,13 @@
 // Vetores separados por categoria
 const categorias = [
-  "Ficção Policial",
-  "Aventura",
-  "Literatura Espiritual",
-  "Romance",
-  "Fantasia",
-  "Horror",
-  "Ficção Científica",
+  "Ficção Policial", // A
+  "Ficção Científica", // B
+  "Literatura Espiritual", // C
+  "Romance", // D
+  "Fantasia", // E
+  "Horror", // F
+  "Mistério", // G
+  "Aventura" // H
 ];
 
 // Pontuações para cada categoria
@@ -17,6 +18,7 @@ const pontuacaoRomanceTotal = [0, 0, 0]; // Exemplo de pontuação
 const pontuacaoFantasiaTotal = [0, 0]; // Exemplo de pontuação
 const pontuacaoHorrorTotal = [0, 0]; // Exemplo de pontuação
 const pontuacaoFiccaoCientificaTotal = [0]; // Exemplo de pontuação
+const pontuacaoMisterio = [0];
 
 // Livros recomendados por categoria
 const livrosFiccaoPolicial = [
@@ -29,14 +31,20 @@ const livrosAventura = [
   "Viagem ao Centro da Terra",
 ];
 const livrosLiteraturaEspiritual = ["A Cabana", "Depois, Silêncio"];
+
 const livrosRomance = [
   "O Melhor de Mim",
   "Um Homem de Sorte",
   "O Lado Bom da Vida",
 ];
+
 const livrosFantasia = ["Harry Potter", "Lua Nova"];
+
 const livrosHorror = ["Hyde", "Bird Box"];
+
 const livrosFiccaoCientifica = ["Avatar"];
+
+const livrosMisterio = ["O visitante inesperado"];
 
 // URLs para livros recomendados por categoria
 const urlsFiccaoPolicial = [
@@ -63,6 +71,7 @@ const urlsFantasia = [
 ];
 const urlsHorror = ["../html/livros/hyde.html", "../html/livros/birdbox.html"];
 const urlsFiccaoCientifica = ["../html/livros/avatar.html"];
+const urlsMisterio = ["../html/livros/o-visitante-inesperado.html"];
 
 // Função para recomendar um livro com base na pontuação calculada
 function recomendarLivro(pontuacao) {
@@ -116,6 +125,9 @@ function recomendarLivro(pontuacao) {
       case "Ficção Científica":
         urlsCategoria = urlsFiccaoCientifica;
         break;
+        case "Mistério":
+        urlsCategoria = urlsMisterio;
+        break;
       default:
         urlsCategoria = [];
     }
@@ -145,6 +157,9 @@ function recomendarLivro(pontuacao) {
         break;
       case "Ficção Científica":
         pontuacaoCategoria = pontuacaoFiccaoCientificaTotal;
+        break;
+        case "Mistério":
+        pontuacaoCategoria = pontuacaoMisterio;
         break;
       default:
         pontuacaoCategoria = [];

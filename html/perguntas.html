@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
+        <link rel="icon" href="../images/logo/logo.png" type="image/png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Questionário de Livros - Biblioteca Senai</title>
@@ -9,216 +10,932 @@
     </head>
     <body>
 
-        <video id="background-video" autoplay muted loop>
-            <source src="../video/lofi.mp4" type="video/mp4">
-            <source src="../video/lofi.webm" type="video/webm">
-        </video>
-
-        <!-- Header Section -->
-        <header class="bg-primary text-white text-center py-3">
-            <h1>Biblioteca Virtual</h1>
-            <nav>
-                <a href="../index.html" class="btn btn-light mt-2">Início</a>
-            </nav>
+        <!-- Cabeçalho -->
+        <header>
+            <div class="left-column">
+            </div>
+            <div class="middle-column">
+                <h1 class="bg-primary text-white text-center py-3">Biblioteca
+                    Virtual</h1>
+            </div>
+            <div class="right-column">
+                <a href="/index.html" class="btn-btn-ligh-mt-2">Inicio</a>
+            </div>
         </header>
 
-        <!-- Main Content -->
+        <!-- Pergunta 1 -->
         <div class="container my-4">
             <div id="questionarioContainer" class="card-p-4">
-                <!-- Pergunta 1 -->
                 <div class="question" id="pergunta1">
-                    <p>1. Qual cenário você gostaria de explorar em um
-                        sonho?</p>
-                    <label><input type="radio" name="q1" value="A"> Um castelo
-                        antigo cheio de segredos e criaturas
-                        maravilhosas</label><br> <br>
-                    <label><input type="radio" name="q1" value="B"> Um lugar
-                        futurista onde as pessoas lutam por suas
-                        vidas</label><br> <br>
-                    <label><input type="radio" name="q1" value="C"> Um castelo
-                        antigo cheio de segredos e criaturas
-                        maravilhosas</label><br> <br>
-                    <label><input type="radio" name="q1" value="D"> Um lugar
-                        futurista onde as pessoas lutam por suas
-                        vidas</label><br> <br>
-                    <label><input type="radio" name="q1" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br> <br>
-                    <label><input type="radio" name="q1" value="F"> <strong>Participar
-                        de desafios emocionantes e cheios de ação</strong> </label><br> <br>
-                    <label><input type="radio" name="q1" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>
+                    <h2 class="h2-estilo">1. Qual a sua abordagem em
+                        relacionamentos?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q1"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Prefiro ser independente e
+                                desapegado.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q1"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Busco uma conexão profunda,
+                                mesmo que arriscada.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q1"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tentando entender a raiz do
+                                meu medo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q1"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Afastando-me e buscando
+                                segurança.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q1"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Gosto de relacionamentos com
+                                um toque de aventura.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q1"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que a amizade é a
+                                base do amor.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q1"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Valorizo a confiança
+                                mútua.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q1"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Estou sempre pronto para
+                                novas aventuras juntos.</div>
+                        </label>
+
+                    </div>
                 </div>
 
                 <!-- Pergunta 2 -->
-                <div class="question d-none" id="pergunta2">
-                    <p>2. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q2" value="A"> Descobrir <!-- Alternativa A-->
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q2" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q2" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q2" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q2" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q2" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q2" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>
+                <div class="question" id="pergunta2">
+                    <h2 class="h2-estilo">2. Qual cenário você gostaria de
+                        explorar em um sonho?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q2"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tendo coragem de enfrentar a
+                                situação.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q2"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tentando entender a raiz do
+                                meu medo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q2"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que a terapia é uma
+                                ferramenta valiosa.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q2"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Afastando-me e buscando
+                                segurança.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q2"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Enfrentando com um plano
+                                estratégico.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q2"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Buscando apoio de amigos ou
+                                família.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q2"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tentando resolver o enigma
+                                que me causa medo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q2"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text"> Encaro o medo como uma
+                                oportunidade de aventura. </div>
+                        </label>
+
+                    </div>
                 </div>
-                    
+
                 <!-- Pergunta 3 -->
-                <div class="question d-none" id="pergunta3">
-                    <p>3. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q3" value="A"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q3" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q3" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q3" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q3" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q3" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q3" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>              
+                <div class="question" id="pergunta3">
+                    <h2 class="h2-estilo">3. Qual cenário você gostaria de
+                        explorar em um sonho?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q3"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que o amor é amor,
+                                independentemente de gênero.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q3"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Valorizo a individualidade e
+                                a aceitação.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q3"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A saúde mental deve ser
+                                discutida abertamente.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q3"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A diversidade traz tensão e
+                                suspense à narrativa.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q3"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que diferentes
+                                culturas enriquecem nosso mundo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q3"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Valorizo a colaboração entre
+                                diferentes pessoas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q3"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A diversidade traz
+                                complexidade aos mistérios.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q3"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A diversidade torna nossas
+                                aventuras ainda mais emocionantes.</div>
+                        </label>
+
+                    </div>
                 </div>
-                
+
                 <!-- Pergunta 4 -->
-                <div class="question d-none" id="pergunta4">
-                    <p>4. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q4" value="A"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q4" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q4" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q4" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>  
-                    <label><input type="radio" name="q4" value="E">Um lugar 
-                         tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q4" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q4" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>  
+                <div class="question" id="pergunta4">
+                    <h2 class="h2-estilo">4. Qual cenário você gostaria de
+                        explorar em um sonho?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q4"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Busco soluções práticas e
+                                racionais.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q4"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Sinto minhas emoções e me
+                                permito vivê-las.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q4"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Busco inspiração em
+                                histórias de superação.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q4"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Um lugar futurista onde as
+                                pessoas lutam por suas vidas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q4"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Confio nas pessoas próximas
+                                para me ajudar.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q4"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tiro lições das dificuldades
+                                que enfrento.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q4"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Procuro entender o que posso
+                                aprender com a situação.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q4"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo desafios como partes
+                                essenciais de uma grande aventura.</div>
+                        </label>
+
+                    </div>
                 </div>
 
                 <!-- Pergunta 5 -->
-                <div class="question d-none" id="pergunta5">
-                    <p>5. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q5" value="A"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q5" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q5" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q5" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>    
-                    <label><input type="radio" name="q5" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q5" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q5" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>
+                <div class="question" id="pergunta5">
+                    <h2 class="h2-estilo">5. Qual é o seu tipo de aventura
+                        favorita?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q5"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma jornada introspectiva e
+                                emocional.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q5"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma batalha épica com
+                                criaturas fantásticas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q5"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma busca por
+                                autoconhecimento e reflexão.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q5"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Um mistério envolvente que
+                                precisa ser resolvido.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q5"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma exploração de mundos
+                                mágicos e aventuras.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q5"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma narrativa que explora
+                                relações familiares.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q5"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma trama cheia de
+                                reviravoltas e segredos.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q5"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Uma aventura repleta de
+                                ação, com descobertas inesperadas a cada
+                                passo.</div>
+                        </label>
+
+                    </div>
                 </div>
 
                 <!-- Pergunta 6 -->
-                <div class="question d-none" id="pergunta6">
-                    <p>6. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q6" value="A"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q6" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q6" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q6" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>    
-                     <label><input type="radio" name="q6" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q6" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q6" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>
+                <div class="question" id="pergunta6">
+                    <h2 class="h2-estilo">6. Como você se sente em relação à
+                        saúde mental?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q6"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que é importante
+                                falar sobre isso abertamente.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q6"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo a saúde mental como uma
+                                jornada pessoal.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q6"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">O humor e a amizade ajudam
+                                na superação.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q6"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">É um tema que me intriga e
+                                quero entender mais.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q6"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que a magia pode
+                                ser uma forma de cura.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q6"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Busco práticas de
+                                autocuidado regularmente.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q6"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo a importância de
+                                desvendar mistérios pessoais.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q6"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Espero ter vivido muitas
+                                aventuras e aprendido com cada uma delas.</div>
+                        </label>
+
+                    </div>
                 </div>
 
                 <!-- Pergunta 7 -->
-                <div class="question d-none" id="pergunta7">
-                    <p>7. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q7" value="A"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q7" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q7" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q7" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>    
-                    <label><input type="radio" name="q7" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q7" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q7" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>
-                </div>
+                <div class="question" id="pergunta7">
+                    <h2 class="h2-estilo">7. Qual elemento em uma história mais
+                        te atrai?</h2>
 
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q7"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Relações complicadas e
+                                emocionais.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q7"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Elementos sobrenaturais e
+                                fantásticos.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q7"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Lições sobre a mente
+                                humana.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q7"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tramas de mistério e
+                                suspense.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q7"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Aventuras épicas em mundos
+                                imaginários.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q7"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Narrativas que exploram
+                                emoções profundas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q7"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Histórias cheias de enigmas
+                                e reviravoltas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q7"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Narrativas que celebram a
+                                busca por novas experiências.</div>
+                        </label>
+
+                    </div>
+                </div>
                 <!-- Pergunta 8 -->
-                <div class="question d-none" id="pergunta8">
-                    <p>8. Qual atividade você prefere fazer em um fim de semana
-                        perfeito?</p>
-                    <label><input type="radio" name="q8" value="A"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q8" value="B"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q8" value="C"> Descobrir
-                        mistérios antigos e aprender coisas novas</label><br>
-                    <label><input type="radio" name="q8" value="D"> Participar
-                        de desafios emocionantes e cheios de ação</label><br>  
-                    <label><input type="radio" name="q8" value="E">Um lugar 
-                        tranquilo, plano e vasto.</label><br>
-                    <label><input type="radio" name="q8" value="F"> Participar
-                            de desafios emocionantes e cheios de ação</label><br>
-                    <label><input type="radio" name="q8" value="G">Um lugar 
-                            tranquilo, plano e vasto.</label><br>  
+                <div class="question" id="pergunta8">
+                    <h2 class="h2-estilo">8. Como você prefere passar seu tempo
+                        livre?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q8"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Refletindo e aprendendo algo
+                                novo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q8"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Assistindo a filmes ou lendo
+                                sobre mundos fantásticos.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q8"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Participando de discussões
+                                sobre saúde mental.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q8"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Resolver quebra-cabeças ou
+                                enigmas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q8"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Explorando novas histórias
+                                de fantasia.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q8"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Assistindo dramas emocionais
+                                que refletem a vida.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q8"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Lendo mistérios que desafiam
+                                a mente.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q8"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Planejando e vivenciando
+                                novas aventuras.</div>
+                        </label>
+
+                    </div>
                 </div>
 
+                <!--Pergunta 9-->
+                <div class="question" id="pergunta9">
+                    <h2 class="h2-estilo">9. Como você lida com mudanças
+                        inesperadas na vida?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q9"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Adapto-me rapidamente e sigo
+                                em frente.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q9"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Reflito sobre o que essa
+                                mudança significa para mim.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q9"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Busco entender a psicologia
+                                por trás da mudança.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q9"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Faço um plano para lidar com
+                                a situação.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q9"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Encaro como uma nova
+                                aventura a ser explorada.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q9"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Tento encontrar apoio nas
+                                pessoas que amo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q9"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Investigo as razões por trás
+                                da mudança</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q9"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo mudanças como
+                                oportunidades para novas aventuras.</div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!--Pergunta 10-->
+
+                <div class="question" id="pergunta10">
+                    <h2 class="h2-estilo">10. Qual o seu sentimento sobre o
+                        passado?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q10"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acredito que as experiências
+                                passadas moldam quem somos.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q10"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo o passado como uma
+                                fonte de aprendizado.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q10"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">É importante refletir sobre
+                                nossos traumas e superações.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q10"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">O passado pode ser um mistério a ser desvendado.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q10"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Ele pode nos inspirar a criar novas histórias.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q10"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Traz memórias que influenciam nossas emoções atuais.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q10"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">O passado guarda segredos que merecem ser explorados.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q10"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo o passado como uma série de aventuras que moldaram meu caminho.</div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!--Pergunta 11-->
+
+                <div class="question" id="pergunta11">
+                    <h2 class="h2-estilo">11. O que você mais valoriza em uma amizade?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q11"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A empatia e a compreensão.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q11"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A liberdade de ser eu mesmo.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q11"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">O apoio emocional e a honestidade.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q11"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">O desafio de resolver problemas juntos.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q11"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">As aventuras e experiências compartilhadas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q11"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A capacidade de ter conversas profundas.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q11"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">A partilha de segredos e mistérios</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q11"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">O espírito de aventura que traz emoção à amizade.</div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!--Pergunta 12-->
+
+                <div class="question" id="pergunta12">
+                    <h2 class="h2-estilo">12. Como você se sente em relação a histórias com finais abertos?</h2>
+
+                    <div class="radio-input-wrapper">
+                        <label class="label">
+                            <input value="A" name="q12"
+                                class="value-1 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Gosto de refletir sobre o que poderia acontecer a seguir. </div>
+                        </label>
+
+                        <label class="label">
+                            <input value="B" name="q12"
+                                class="value-2 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Acho intrigante imaginar diferentes possibilidades.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="C" name="q12"
+                                class="value-3 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Isso me faz pensar sobre a complexidade da vida.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="D" name="q12"
+                                class="value-4 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Finais abertos me deixam ansioso, mas curioso.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="E" name="q12"
+                                class="value-5 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Vejo isso como uma forma de deixar a imaginação fluir.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="F" name="q12"
+                                class="value-6 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Valorizo as lições que podem ser tiradas de finais ambíguos.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="G" name="q12"
+                                class="value-7 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Adoro desvendar as pistas que levam a diferentes conclusões.</div>
+                        </label>
+
+                        <label class="label">
+                            <input value="H" name="q12"
+                                class="value-8 radio-input" type="radio">
+                            <div class="radio-design"></div>
+                            <div class="label-text">Gosto de pensar que a aventura continua além do final.</div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Aviso de pergunta não respondida -->
+                <div id="aviso" class="alert alert-danger d-none mt-3">
+                    Por favor, responda à pergunta antes de continuar.
+                </div>
                 <!-- Navegação do Questionário -->
                 <div class="d-flex justify-content-between mt-3">
                     <button id="botaoAnterior" class="btn btn-secondary"
-                        onclick="perguntaAnterior()"> <span class="label">Anterior</span>
-                            <span class="icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor" transform="rotate(180 12 12)" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
-                              </svg>
-                            </span>
-                    
-                    </button>
-                    <button id="botaoProximo" class="btn btn-primary"
-                        onclick="proximaPergunta()"> <span class="label">Próximo</span>
+                        onclick="perguntaAnterior()" style="display: none;">
+                        <span class="label">Anterior</span>
                         <span class="icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
-                           height="24"><path fill="none" d="M0 0h24v24H0z"></path>
-                           <path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z">
-                           </path></svg>
-                        </span></button>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    transform="rotate(180 12 12)"
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button id="botaoProximo" class="btn btn-primary"
+                        onclick="proximaPergunta()">
+                        <span class="label">Próximo</span>
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
                     <!-- Botão Finalizar -->
-                    <button id="botaoFinalizar" 
-                        onclick="processarQuestionario()">Finalizar</button>
+                    <button id="botaoFinalizar" class="btn btn-success"
+                        onclick="processarQuestionario()"
+                        style="display: none;">
+                        <span class="label">Finalizar</span>
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    transform="rotate(-90 12 12)"
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                            </svg>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
 
         <!-- Footer Section -->
         <footer class="bg-dark text-white text-center py-3">
-            <p>Aplicação web desenvolvida pela turma de Informática para
+            <p>Aplicação web desenvolvida pela MELHOR turma de Informática para
                 Internet 2024 Trilhas de Futuro 4 SENAI-MG Uberaba</p>
             <p>Instrutor: Lenon Yuri</p>
         </footer>

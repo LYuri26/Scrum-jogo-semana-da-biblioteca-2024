@@ -17,10 +17,34 @@ function mostrarPergunta() {
 
   // Atualiza a visibilidade dos botões de navegação
   atualizarBotoesNavegacao(perguntas.length);
+  
+  // Oculta o aviso sempre que uma nova pergunta é mostrada
+  ocultarAviso();
+}
+
+// Função para verificar se a pergunta atual foi respondida
+function perguntaRespondida() {
+  const perguntaAtualElement = document.querySelectorAll(".question")[perguntaAtual];
+  const inputs = perguntaAtualElement.querySelectorAll("input[type='radio'], input[type='checkbox']");
+  return Array.from(inputs).some(input => input.checked);
 }
 
 // Função para mostrar a próxima pergunta
 function proximaPergunta() {
+  // Verifica se a pergunta foi respondida
+  if (!perguntaRespondida()) {
+    // Mostra o alerta se a pergunta não foi respondida
+    const aviso = document.getElementById('aviso');
+    aviso.style.display = 'block'; // Mostra o alerta
+
+    // Remove o alerta após 3 segundos
+    setTimeout(() => {
+      aviso.style.display = 'none'; // Oculta o alerta
+    }, 3000);
+    
+    return; // Impede que a função prossiga para a próxima pergunta
+  }
+
   // Incrementa o índice da pergunta atual
   perguntaAtual++;
   // Chama a função para atualizar a exibição das perguntas
@@ -54,7 +78,14 @@ function atualizarBotoesNavegacao(totalPerguntas) {
   }
 }
 
+// Função para ocultar o aviso
+function ocultarAviso() {
+  const aviso = document.getElementById('aviso');
+  aviso.style.display = 'none'; // Oculta o aviso
+}
+
 // Inicializa a exibição da primeira pergunta quando a página carregar
 document.addEventListener("DOMContentLoaded", function() {
-  mostrarPergunta();
+  mostrarPergunta(); // Mostra a primeira pergunta
+  ocultarAviso(); // Garante que o aviso comece oculto
 });
