@@ -228,7 +228,7 @@ header nav a:hover {
 
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: rgba(233, 118, 78, 0.4); 
@@ -295,7 +295,7 @@ footer p {
   }
 
   header h1 {
-    font-size: 2.4rem;
+    font-size: 30px;
     margin-bottom: 15px; /* Espaço entre o título e o botão */
   }
 
@@ -321,13 +321,13 @@ footer p {
   }
 
   #bemVindoContainer h1 {
-    font-size: 30px;
+    font-size: 16px;
     margin-bottom: 10px;
     text-align: center;
   }
 
   #bemVindoContainer p {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -343,4 +343,15 @@ footer p {
     margin-top: 20px;
     align-self: center; /* Centraliza o botão */
   }
+  footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(233, 118, 78, 0.4); 
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
 }

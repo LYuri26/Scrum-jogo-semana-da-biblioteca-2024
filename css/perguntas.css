@@ -463,7 +463,7 @@ footer p {
   }
 
   header h1 {
-    font-size: 2.5rem; /* Reduz o tamanho do título */
+    font-size: 2rem; /* Reduz o tamanho do título */
   }
 
   .btn-btn-ligh-mt-2 {
@@ -498,7 +498,7 @@ footer p {
 /* Media query para dispositivos muito pequenos (ex. celulares) */
 @media (max-width: 480px) {
   header h1 {
-    font-size: 2rem; /* Diminui ainda mais o tamanho do título */
+    font-size: 1.5rem; /* Diminui ainda mais o tamanho do título */
   }
 
   .btn-btn-ligh-mt-2 {
