@@ -343,15 +343,4 @@ footer p {
     margin-top: 20px;
     align-self: center; /* Centraliza o botão */
   }
-  footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(233, 118, 78, 0.4); 
-  backdrop-filter: blur(10px);
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
 }
