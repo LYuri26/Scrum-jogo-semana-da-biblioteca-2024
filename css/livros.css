@@ -236,7 +236,7 @@ footer p {
   }
 
   footer p {
-    font-size: 12px; /* Reduz o tamanho da fonte do rodapé */
+    font-size: 14px;
   }
 }
 
@@ -268,7 +268,7 @@ footer p {
   }
 
   footer p {
-    font-size: 1.3em; /* Diminui o tamanho da fonte do rodapé */
+    font-size: 14px;
   }
 }
 }
