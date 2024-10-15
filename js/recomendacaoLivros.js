@@ -11,10 +11,10 @@ const categorias = [
 ];
 
 // Pontuações para cada categoria
-const pontuacaoFiccaoPolicialTotal = [6, 8, 10, 12]; // Exemplo de pontuação
+const pontuacaoFiccaoPolicialTotal = [6, 8, 9, 10, 12]; // Exemplo de pontuação
 const pontuacaoAventuraTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoLiteraturaEspiritualTotal = [6, 12]; // Exemplo de pontuação
-const pontuacaoRomanceTotal = [6, 8, 10, 12]; // Exemplo de pontuação
+const pontuacaoRomanceTotal = [6, 8, 9, 10, 12]; // Exemplo de pontuação
 const pontuacaoFantasiaTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoHorrorTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoFiccaoCientificaTotal = [12]; // Exemplo de pontuação
@@ -24,6 +24,7 @@ const pontuacaoMisterioTotal = [6, 12]; // A variável já foi declarada correta
 const livrosFiccaoPolicial = [
   "Dexter: Um Assassino",
   "O Xangô de Baker Street",
+  "Querido e devotado Dexter",
   "A queda",
   "Hannibal",
 ];
@@ -31,24 +32,32 @@ const livrosAventura = [
   "A Volta ao Mundo em 80 Dias",
   "Viagem ao Centro da Terra",
 ];
-const livrosLiteraturaEspiritual = ["A Cabana", "Depois, Silêncio"];
+const livrosLiteraturaEspiritual = ["A Cabana", 
+  "Depois, Silêncio"];
 
 const livrosRomance = [
   "O Melhor de Mim",
   "Um Homem de Sorte",
+  "Não se apega, não", 
   "Vermelho Branco e Sangue Azul",
   "O Lado Bom da Vida",
 ];
 
-const livrosFantasia = ["Harry Potter", "Lua Nova"];
-const livrosHorror = ["Hyde", "Bird Box"];
+const livrosFantasia = ["Harry Potter", 
+  "Lua Nova"];
+
+const livrosHorror = ["Hyde", 
+  "Bird Box"];
+
 const livrosFiccaoCientifica = ["Avatar"];
-const livrosMisterio = ["A Vingança", "O visitante inesperado"];
+const livrosMisterio = ["A Vingança", 
+  "O visitante inesperado"];
 
 // URLs para livros recomendados por categoria
 const urlsFiccaoPolicial = [
   "../html/livros/dexter-um-assassino.html",
   "../html/livros/o-xango-de-baker-street.html",
+  "../html/livros/querido-e-devotado-dexter.html",
   "../html/livros/a-queda.html",
   "../html/livros/hannibal.html",
 ];
@@ -63,6 +72,7 @@ const urlsLiteraturaEspiritual = [
 const urlsRomance = [
   "../html/livros/o-melhor-de-mim.html",
   "../html/livros/um-homem-de-sorte.html",
+  "../html/livros/nao-se-apega.html",
   "../html/livros/vermelho-branco.html",
   "../html/livros/o-lado-bom-da-vida.html",
 ];
@@ -70,9 +80,11 @@ const urlsFantasia = [
   "../html/livros/harry-potter.html",
   "../html/livros/lua-nova.html",
 ];
-const urlsHorror = ["../html/livros/hyde.html", "../html/livros/bird-box.html"];
+const urlsHorror = ["../html/livros/hyde.html", 
+  "../html/livros/bird-box.html"];
 const urlsFiccaoCientifica = ["../html/livros/avatar.html"];
-const urlsMisterio = ["../html/livros/a-vinganca.html", "../html/livros/o-visitante-inesperado.html"];
+const urlsMisterio = ["../html/livros/a-vinganca.html", 
+  "../html/livros/o-visitante-inesperado.html"];
 
 // Função para recomendar um livro com base na pontuação calculada
 function recomendarLivro(pontuacao) {

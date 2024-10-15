@@ -130,3 +130,19 @@ h2 {
     outline: none;  /* Remove a borda azul */
     box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
   }
+
+  @media (max-width: 768px) {
+    /* Outros estilos existentes */
+  
+    .btn{
+      margin-top: 20px; /* Adiciona espaço acima do botão */
+      margin-bottom: 20px;
+      display: block; /* Garante que o botão ocupe a linha inteira */
+      width: 50%; /* Ajusta a largura do botão */
+      margin-left: auto; /* Centraliza horizontalmente */
+      margin-right: auto; /* Centraliza horizontalmente */
+    }
+  
+    /* Estilos adicionais, se necessário */
+  }
+  
