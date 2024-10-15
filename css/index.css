@@ -51,6 +51,7 @@ body {
   color: #D9B89C;
   background-color: var(--cor-fundo);
   margin: 0;
+  background-color: var(--cor-fundo);
 }
 
 .btn-light {
@@ -309,15 +310,9 @@ footer p {
 
   /* Ajuste do main #bemVindoContainer */
   #bemVindoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 90%; /* Mantém uma boa largura para telas menores */
-    min-height: calc(75vh - 80px - 60px); /* Ajusta a altura para conter o conteúdo */
-    margin: 130px auto; /* Centraliza o main e ajusta margens */
-    padding: 15px; /* Espaçamento interno */
-    box-sizing: border-box; /* Garante que o padding não ultrapasse o container */
+    max-width: 95%; /* Aumenta a largura em telas menores */
+    margin: 130px auto; /* Centraliza */
+    padding: 15px; /* Ajusta padding */
   }
 
   #bemVindoContainer h1 {
