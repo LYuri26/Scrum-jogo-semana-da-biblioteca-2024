@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
 
 :root {
   --cor-primaria: #873B33; /* Cor primária */
@@ -17,7 +16,7 @@
 body {
   font-family: var(--fonte-principal);
   background-color: var(--cor-fundo);
-  background-image: url('../images/background/planodefundo3.jpg'); /* Caminho da imagem */
+  background-image: url('../images/background/back2.png'); /* Caminho da imagem */
   background-size: cover; /* A imagem cobre toda a área */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
@@ -25,21 +24,47 @@ body {
 
 /* Personalização do Cabeçalho */
 header {
-  background-color: rgba(135, 59, 51, 0.5); /* Cor #873B33 com 50% de opacidade */
+  background-color: rgba(135, 59, 51, 0.5); /* Cor #873B33 com 80% de opacidade */
   backdrop-filter: blur(10px);
   color: var(--cor-fundo);
-  padding: 1rem 20px;
+  padding: 1rem 0;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--fonte-principal);
+
+  display: flex; /* Flexbox para o layout em 3 colunas */
+  justify-content: space-between; /* Espaça as colunas, será alterado abaixo */
+  align-items: center; /* Centraliza os itens verticalmente */
+  height: 100px; /* Altura do header */
+  padding: 0 20px; /* Padding lateral para ajustar os conteúdos */
 }
+
+header .left-column,
+header .middle-column,
+header .right-column {
+  flex: 1; /* As três colunas têm o mesmo tamanho */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+header .left-column {
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+header .right-column {
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+}
+
 
 header h1 {
   font-size: 3rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
 }
 
 header nav a {
@@ -60,7 +85,11 @@ header nav a:hover {
 }
 
 .card {
+  margin-top: 100px;
   margin-bottom: 1.5rem;
+  background-color: #faeee938;
+  backdrop-filter: blur(16px);
+  color: #ffffffda;
 }
 
 .card img {
@@ -91,19 +120,73 @@ header nav a:hover {
 
 /* Estilo do Rodapé */
 footer {
-  margin-top: 75px;
-  bottom: 0; /* Posiciona o footer na parte inferior */
-  left: 0; /* Certifica-se de que o footer esteja alinhado à esquerda */
-  width: 100%; /* Faz o footer ocupar toda a largura da tela */
+  position: unset;
+  bottom: 0;
+  width: 100%;
   background-color: rgba(233, 118, 78, 0.4); 
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 10px 0;
   text-align: center;
-  z-index: 1000; /* Garante que o footer fique acima de outros elementos */
 }
 
 footer p {
-  margin: 5px 0; /* Margem vertical */
-  font-size: 14px; /* Tamanho da fonte */
+  margin: 5px 0;
+  font-size: 14px;
+}
+/* Media query para dispositivos menores que 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Muda a direção do header para coluna */
+    height: auto; /* Ajusta a altura do header */
+    padding: 10px; /* Reduz o padding */
+  }
+
+  header h1 {
+    font-size: 2.5rem; /* Reduz o tamanho do título */
+  }
+
+  header nav a {
+    font-size: 14px; /* Reduz o tamanho da fonte dos links do menu */
+    margin: 5px 0; /* Ajusta a margem dos links */
+  }
+
+  .container {
+    width: 90%; /* Aumenta a largura para ocupar mais espaço */
+  }
+
+  .card {
+    margin-top: 50px; /* Reduz a margem superior */
+  }
+
+  .card img {
+    max-width: 100%; /* Permite que a imagem ocupe toda a largura disponível */
+  }
+
+  footer p {
+    font-size: 12px; /* Reduz o tamanho da fonte do rodapé */
+  }
+}
+
+/* Media query para dispositivos muito pequenos (ex. celulares) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem; /* Diminui ainda mais o tamanho do título */
+  }
+
+  header nav a {
+    font-size: 12px; /* Diminui ainda mais o tamanho da fonte dos links do menu */
+  }
+
+  .container {
+    width: 95%; /* Aumenta a largura ainda mais para caber melhor */
+  }
+
+  .card {
+    margin-top: 30px; /* Reduz ainda mais a margem superior */
+  }
+
+  footer p {
+    font-size: 10px; /* Diminui o tamanho da fonte do rodapé */
+  }
 }

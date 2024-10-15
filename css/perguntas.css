@@ -102,6 +102,7 @@ header {
   color: var(--cor-fundo);
   padding: 1rem 0;
   text-align: center;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -327,7 +328,7 @@ header nav a:hover {
 
 /* Estilo do Rodapé */
 footer {
-  margin-top: 75px;
+  margin-top: 174px;
   bottom: 0; /* Posiciona o footer na parte inferior */
   left: 0; /* Certifica-se de que o footer esteja alinhado à esquerda */
   width: 100%; /* Faz o footer ocupar toda a largura da tela */
@@ -415,4 +416,63 @@ footer p {
 
 #aviso {
   display: none; /* Oculta o aviso inicialmente */
+}
+
+/* Media query para dispositivos menores que 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Muda a direção do header para coluna */
+    height: auto; /* Permite que a altura do header se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .btn-btn-ligh-mt-2 {
+    padding: 0.8em 1.6em; /* Reduz o padding do botão */
+    font-size: 14px; /* Reduz o tamanho da fonte */
+  }
+
+  #questionarioContainer {
+    padding: 10px; /* Reduz o padding do container do questionário */
+    min-height: 300px; /* Ajusta a altura mínima */
+  }
+
+  /* Ajustes nos botões de navegação */
+  #botaoAnterior,
+  #botaoProximo,
+  #botaoFinalizar {
+    font-size: 12px; /* Reduz o tamanho da fonte */
+    padding: 8px 16px; /* Ajusta o padding */
+  }
+
+  .question label {
+    font-size: 18px; /* Reduz o tamanho das labels das perguntas */
+  }
+
+  footer p {
+    font-size: 12px; /* Reduz o tamanho da fonte do footer */
+  }
+}
+
+/* Media query para dispositivos muito pequenos (ex. celulares) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Diminui ainda mais o tamanho do título */
+  }
+
+  .btn-btn-ligh-mt-2 {
+    padding: 0.5em 1em; /* Ajusta o padding do botão para telas pequenas */
+    font-size: 12px; /* Diminui o tamanho da fonte ainda mais */
+  }
+
+  #questionarioContainer {
+    margin-top: 80px; /* Ajusta a margem superior */
+  }
+
+  .label-text {
+    font-size: 18px; /* Diminui o tamanho do texto da label */
+  }
 }

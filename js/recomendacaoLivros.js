@@ -1,24 +1,24 @@
 // Vetores separados por categoria
 const categorias = [
-  "Ficção Policial", // A
+  "Romance", // A
   "Ficção Científica", // B
   "Literatura Espiritual", // C
-  "Romance", // D
+  "Horror", // D
   "Fantasia", // E
-  "Horror", // F
+  "Ficção Policial", // F
   "Mistério", // G
   "Aventura" // H
 ];
 
 // Pontuações para cada categoria
-const pontuacaoFiccaoPolicialTotal = [0, 0, 0]; // Exemplo de pontuação
-const pontuacaoAventuraTotal = [0, 0]; // Exemplo de pontuação
-const pontuacaoLiteraturaEspiritualTotal = [0, 0]; // Exemplo de pontuação
-const pontuacaoRomanceTotal = [0, 0, 0]; // Exemplo de pontuação
-const pontuacaoFantasiaTotal = [0, 0]; // Exemplo de pontuação
-const pontuacaoHorrorTotal = [0, 0]; // Exemplo de pontuação
-const pontuacaoFiccaoCientificaTotal = [0]; // Exemplo de pontuação
-const pontuacaoMisterio = [0];
+const pontuacaoFiccaoPolicialTotal = [6, 9, 12]; // Exemplo de pontuação
+const pontuacaoAventuraTotal = [6, 12]; // Exemplo de pontuação
+const pontuacaoLiteraturaEspiritualTotal = [6, 12]; // Exemplo de pontuação
+const pontuacaoRomanceTotal = [6, 9, 12]; // Exemplo de pontuação
+const pontuacaoFantasiaTotal = [6, 12]; // Exemplo de pontuação
+const pontuacaoHorrorTotal = [6, 12]; // Exemplo de pontuação
+const pontuacaoFiccaoCientificaTotal = [12]; // Exemplo de pontuação
+const pontuacaoMisterioTotal = [12]; // A variável já foi declarada corretamente
 
 // Livros recomendados por categoria
 const livrosFiccaoPolicial = [
@@ -69,12 +69,14 @@ const urlsFantasia = [
   "../html/livros/harry-potter.html",
   "../html/livros/lua-nova.html",
 ];
-const urlsHorror = ["../html/livros/hyde.html", "../html/livros/birdbox.html"];
+const urlsHorror = ["../html/livros/hyde.html", "../html/livros/bird-box.html"];
 const urlsFiccaoCientifica = ["../html/livros/avatar.html"];
 const urlsMisterio = ["../html/livros/o-visitante-inesperado.html"];
 
 // Função para recomendar um livro com base na pontuação calculada
 function recomendarLivro(pontuacao) {
+  console.log("Pontuação por Categoria:", pontuacao); // Exibe a pontuação de cada categoria no console
+
   // Variáveis para determinar a categoria com a maior pontuação
   let categoriaFavorita = "";
   let maiorPontuacao = 0;
@@ -82,9 +84,9 @@ function recomendarLivro(pontuacao) {
   // Itera sobre cada categoria para encontrar a que tem a maior pontuação
   for (let i = 0; i < categorias.length; i++) {
     const categoria = categorias[i];
+    const categoriaPontuacao = pontuacao[i]; // Pontuação para cada categoria
 
-    // Acessa a pontuação da categoria correspondente a partir do objeto 'pontuacao'
-    const categoriaPontuacao = pontuacao[categoria];
+    console.log(`Categoria: ${categoria}, Pontuação: ${categoriaPontuacao}`);
 
     // Se a pontuação dessa categoria for maior que a maiorPontuacao, atualize
     if (categoriaPontuacao > maiorPontuacao) {
@@ -93,6 +95,8 @@ function recomendarLivro(pontuacao) {
     }
   }
 
+  console.log(`Categoria Favorita: ${categoriaFavorita}, Pontuação: ${maiorPontuacao}`);
+
   // Inicializa a variável para armazenar a URL da recomendação de livro
   let urlLivroRecomendado = "../html/livros/nao-encontrado.html"; // Página genérica
 
@@ -100,86 +104,74 @@ function recomendarLivro(pontuacao) {
   const categoriaIndex = categorias.indexOf(categoriaFavorita);
 
   if (categoriaIndex !== -1) {
-    // Seleciona os vetores de livros e URLs correspondentes à categoria favorita
     let urlsCategoria = [];
+    let pontuacaoCategoria = [];
 
+    // Seleciona os vetores de URLs e pontuações correspondentes à categoria favorita
     switch (categoriaFavorita) {
       case "Ficção Policial":
         urlsCategoria = urlsFiccaoPolicial;
-        break;
-      case "Aventura":
-        urlsCategoria = urlsAventura;
-        break;
-      case "Literatura Espiritual":
-        urlsCategoria = urlsLiteraturaEspiritual;
-        break;
-      case "Romance":
-        urlsCategoria = urlsRomance;
-        break;
-      case "Fantasia":
-        urlsCategoria = urlsFantasia;
-        break;
-      case "Horror":
-        urlsCategoria = urlsHorror;
-        break;
-      case "Ficção Científica":
-        urlsCategoria = urlsFiccaoCientifica;
-        break;
-        case "Mistério":
-        urlsCategoria = urlsMisterio;
-        break;
-      default:
-        urlsCategoria = [];
-    }
-
-    // Agora buscamos a recomendação com base na maior pontuação
-    let pontuacaoCategoria = [];
-
-    // Determina a pontuação correta para a categoria favorita
-    switch (categoriaFavorita) {
-      case "Ficção Policial":
         pontuacaoCategoria = pontuacaoFiccaoPolicialTotal;
         break;
       case "Aventura":
+        urlsCategoria = urlsAventura;
         pontuacaoCategoria = pontuacaoAventuraTotal;
         break;
       case "Literatura Espiritual":
+        urlsCategoria = urlsLiteraturaEspiritual;
         pontuacaoCategoria = pontuacaoLiteraturaEspiritualTotal;
         break;
       case "Romance":
+        urlsCategoria = urlsRomance;
         pontuacaoCategoria = pontuacaoRomanceTotal;
         break;
       case "Fantasia":
+        urlsCategoria = urlsFantasia;
         pontuacaoCategoria = pontuacaoFantasiaTotal;
         break;
       case "Horror":
+        urlsCategoria = urlsHorror;
         pontuacaoCategoria = pontuacaoHorrorTotal;
         break;
       case "Ficção Científica":
+        urlsCategoria = urlsFiccaoCientifica;
         pontuacaoCategoria = pontuacaoFiccaoCientificaTotal;
         break;
-        case "Mistério":
-        pontuacaoCategoria = pontuacaoMisterio;
+      case "Mistério":
+        urlsCategoria = urlsMisterio;
+        pontuacaoCategoria = pontuacaoMisterioTotal;
         break;
-      default:
-        pontuacaoCategoria = [];
     }
 
-    // Itera sobre as pontuações para determinar a URL do livro recomendado
+    // Encontra a melhor recomendação de livro com base na maior pontuação
+    let menorDiferenca = Infinity;
     for (let i = 0; i < pontuacaoCategoria.length; i++) {
       const intervalo = pontuacaoCategoria[i];
+      const diferenca = Math.abs(maiorPontuacao - intervalo);
 
-      // Se a maior pontuação corresponde à pontuação da categoria, seleciona o livro
-      if (maiorPontuacao >= intervalo) {
-        urlLivroRecomendado = urlsCategoria[i];
-        break; // Sai do loop após encontrar a recomendação
+      if (diferenca < menorDiferenca) {
+        menorDiferenca = diferenca;
+        urlLivroRecomendado = urlsCategoria[i]; // Atribui a URL correspondente
       }
     }
   }
 
   // Redireciona para a página específica do livro recomendado
+  console.log(`Redirecionando para: ${urlLivroRecomendado}`);
   window.location.href = urlLivroRecomendado;
 }
+
+
+// Função que processa o questionário e recomenda o livro
+function processarQuestionario() {
+  // Calcula a pontuação com base nas respostas
+  const pontuacao = calcularPontuacao(); // A função calcularPontuacao deve estar definida
+  console.log("Pontuação calculada pelo questionário:", pontuacao);
+
+  // Recomenda um livro com base na pontuação
+  recomendarLivro(pontuacao);
+}
+
 
 // Função que processa o questionário e recomenda o livro
 function processarQuestionario() {

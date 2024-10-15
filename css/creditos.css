@@ -1,0 +1,126 @@
+/* FUNDO CSS */
+/* From Uiverse.io by Efrain2112 */
+:root {
+    --cor-primaria: #873B33; /* Cor primária */
+    --cor-secundaria: #873B33; /* Cor secundária */
+    --cor-fundo: #873B33; /* Cor de fundo */
+    --cor-texto: #000000; /* Cor do texto preta */
+    --cor-box-fundo: rgba(255, 255, 255, 0.9); /* Fundo suave para a box */
+    --fonte-principal: "Goudy Bookletter 1911", serif; /* Fonte principal */
+}
+
+header{
+    background-color: var(--cor-box-fundo);
+    border-radius: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    --size: 80px; /* Controla o tamanho do fundo */
+    background-image: url('../images/background/back5.png');
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 20px;
+    color: var(--cor-primaria); /* Cor do título principal */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 40px 0;
+    color: var(--cor-secundaria); /* Cor do subtítulo */
+   
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.credit-section {
+    margin-bottom: 40px;
+}
+
+.credits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px; /* Adiciona padding à seção */
+    background-color: var(--cor-box-fundo); /* Fundo suave para destacar as fotos */
+    border-radius: 20px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.person {
+    text-align: center;
+    margin: 20px;
+}
+
+.person h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: var(--cor-primaria); /* Cor dos nomes */
+}
+
+.person img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Círculo perfeito para as fotos */
+    object-fit: cover;
+    border: 3px solid var(--cor-secundaria); /* Borda em torno das imagens */
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icons a img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.icons a {
+    display: inline-block;
+    margin: 0 5px; /* Espaçamento entre os ícones */
+    padding: 0;
+    text-decoration: none;
+    transition: transform 0.2s; /* Efeito ao passar o mouse */
+}
+
+.icons a:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+      font-size: 2.3em; /* Diminui ainda mais o tamanho do título */
+    }
+  
+    h2 {
+      font-size: 1.7em; /* Diminui ainda mais o tamanho do subtítulo */
+    }
+  
+    .container {
+      width: 95%; /* Aumenta ainda mais a largura */
+    }
+  
+    .person img {
+      width: 120px; /* Reduz ainda mais o tamanho das imagens */
+      height: 120px; /* Reduz ainda mais o tamanho das imagens */
+      
+    }
+  
+    .icons a img {
+      width: 35px; /* Reduz o tamanho dos ícones */
+      height: 35px; /* Reduz o tamanho dos ícones */
+      
+    }
+  }
+
+  
