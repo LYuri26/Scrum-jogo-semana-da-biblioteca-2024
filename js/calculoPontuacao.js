@@ -47,28 +47,28 @@ function calcularPontuacao() {
 
       // Atualiza a pontuação de acordo com a resposta
       switch (indiceResposta) {
-        case 0: // Romance
+        case 1: // Romance
           pontuacaoRomance += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 1: // Ficção Científica
+        case 2: // Ficção Científica
           pontuacaoFiccaoCientifica += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 2: // Literatura Espiritual
+        case 3: // Literatura Espiritual
           pontuacaoLiteraturaEspiritual += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 3: // Horror
+        case 4: // Horror
           pontuacaoHorror += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 4: // Fantasia
+        case 5: // Fantasia
           pontuacaoFantasia += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 5: // Ficção Policial
+        case 6: // Ficção Policial
           pontuacaoFiccaoPolicial += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 6: // Mistério
+        case 7: // Mistério
           pontuacaoMisterio += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
-        case 7: // Aventura
+        case 8: // Aventura
           pontuacaoAventura += obterPontuacaoPorPergunta(i, indiceResposta);
           break;
       }

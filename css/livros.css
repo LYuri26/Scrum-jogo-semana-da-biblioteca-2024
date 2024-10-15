@@ -42,6 +42,19 @@ header {
   padding: 0 20px; /* Padding lateral para ajustar os conteúdos */
 }
 
+.mt-2{
+  outline: none;
+    color: #873B33;
+    font-weight: bold;
+    margin-bottom: 13px;
+    padding: 1em 4em;
+    border: 3px dashed #873B33;
+    border-radius: 5px;
+    background-color: #EADDCA;
+    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    transition: .1s ease-in-out, .4s color;
+}
+
 header .left-column,
 header .middle-column,
 header .right-column {
@@ -152,8 +165,7 @@ footer p {
   }
 
   .container {
-    width: 90%; /* Aumenta a largura para ocupar mais espaço */
-  }
+    width: 60%; /* Ajusta a largura em dispositivos médios */
 
   .card {
     margin-top: 50px; /* Reduz a margem superior */
@@ -180,10 +192,11 @@ footer p {
 
   .container {
     width: 95%; /* Aumenta a largura ainda mais para caber melhor */
+    height: 3%;
   }
 
   .card {
-    margin-top: 30px; /* Reduz ainda mais a margem superior */
+    margin-top: 70px; /* Reduz ainda mais a margem superior */
   }
 
   footer p {

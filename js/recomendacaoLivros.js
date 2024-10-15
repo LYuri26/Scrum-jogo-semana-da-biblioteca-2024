@@ -14,7 +14,7 @@ const categorias = [
 const pontuacaoFiccaoPolicialTotal = [6, 9, 12]; // Exemplo de pontuação
 const pontuacaoAventuraTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoLiteraturaEspiritualTotal = [6, 12]; // Exemplo de pontuação
-const pontuacaoRomanceTotal = [6, 9, 12]; // Exemplo de pontuação
+const pontuacaoRomanceTotal = [6, 8, 10, 12]; // Exemplo de pontuação
 const pontuacaoFantasiaTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoHorrorTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoFiccaoCientificaTotal = [12]; // Exemplo de pontuação
@@ -31,19 +31,15 @@ const livrosAventura = [
   "Viagem ao Centro da Terra",
 ];
 const livrosLiteraturaEspiritual = ["A Cabana", "Depois, Silêncio"];
-
 const livrosRomance = [
   "O Melhor de Mim",
   "Um Homem de Sorte",
+  "Vermelho Branco e Sangue Azul",
   "O Lado Bom da Vida",
 ];
-
 const livrosFantasia = ["Harry Potter", "Lua Nova"];
-
 const livrosHorror = ["Hyde", "Bird Box"];
-
 const livrosFiccaoCientifica = ["Avatar"];
-
 const livrosMisterio = ["O visitante inesperado"];
 
 // URLs para livros recomendados por categoria
@@ -63,6 +59,7 @@ const urlsLiteraturaEspiritual = [
 const urlsRomance = [
   "../html/livros/o-melhor-de-mim.html",
   "../html/livros/um-homem-de-sorte.html",
+  "../html/livros/vermelho-branco.html",
   "../html/livros/o-lado-bom-da-vida.html",
 ];
 const urlsFantasia = [
@@ -80,6 +77,7 @@ function recomendarLivro(pontuacao) {
   // Variáveis para determinar a categoria com a maior pontuação
   let categoriaFavorita = "";
   let maiorPontuacao = 0;
+  let empate = false; // Variável para detectar empate
 
   // Itera sobre cada categoria para encontrar a que tem a maior pontuação
   for (let i = 0; i < categorias.length; i++) {
@@ -92,10 +90,20 @@ function recomendarLivro(pontuacao) {
     if (categoriaPontuacao > maiorPontuacao) {
       maiorPontuacao = categoriaPontuacao;
       categoriaFavorita = categoria;
+      empate = false; // Resetar o empate se houver uma nova maior pontuação
+    } else if (categoriaPontuacao === maiorPontuacao) {
+      empate = true; // Se houver empate
     }
   }
 
   console.log(`Categoria Favorita: ${categoriaFavorita}, Pontuação: ${maiorPontuacao}`);
+
+  // Redireciona para a página de "não encontrado" se houver empate
+  if (empate) {
+    console.log("Empate encontrado, redirecionando para página de livro não encontrado.");
+    window.location.href = "../html/livros/nao-encontrado.html"; // Página genérica
+    return;
+  }
 
   // Inicializa a variável para armazenar a URL da recomendação de livro
   let urlLivroRecomendado = "../html/livros/nao-encontrado.html"; // Página genérica
@@ -161,22 +169,11 @@ function recomendarLivro(pontuacao) {
   window.location.href = urlLivroRecomendado;
 }
 
-
 // Função que processa o questionário e recomenda o livro
 function processarQuestionario() {
   // Calcula a pontuação com base nas respostas
   const pontuacao = calcularPontuacao(); // A função calcularPontuacao deve estar definida
   console.log("Pontuação calculada pelo questionário:", pontuacao);
-
-  // Recomenda um livro com base na pontuação
-  recomendarLivro(pontuacao);
-}
-
-
-// Função que processa o questionário e recomenda o livro
-function processarQuestionario() {
-  // Calcula a pontuação com base nas respostas
-  const pontuacao = calcularPontuacao(); // Implementação dessa função deve estar em algum lugar
 
   // Recomenda um livro com base na pontuação
   recomendarLivro(pontuacao);
