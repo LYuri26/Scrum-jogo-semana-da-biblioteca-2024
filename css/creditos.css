@@ -1,4 +1,10 @@
-/* FUNDO CSS */
+/* FUNDO CSS 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    --size: 80px; /* Controla o tamanho do fundo */
+  /*  background-image: url('../images/background/back5.png');*/
+
 /* From Uiverse.io by Efrain2112 */
 :root {
     --cor-primaria: #873B33; /* Cor primária */
@@ -22,116 +28,105 @@ body {
 }
 
 h1 {
-    font-size: 3em;
-    margin-top: 20px;
-    color: var(--cor-primaria); /* Cor do título principal */
+  font-size: 3em;
+  margin-top: 20px;
+  color: var(--cor-primaria); /* Cor do título principal */
 }
 
 h2 {
-    font-size: 2.5em;
-    margin: 40px 0;
-    color: var(--cor-secundaria); /* Cor do subtítulo */
-   
-
+  font-size: 2.5em;
+  margin: 40px 0;
+  color: var(--cor-secundaria); /* Cor do subtítulo */
 }
-.btn-btn-secondary {
-    outline: none; /* Remove outline padrão */
-    color: #873B33;
-    font-weight: bold;
-    margin-bottom: 13px;
-    padding: 1em 4em; /* Diminuindo ainda mais o padding */
-    border: 3px dashed #873B33; /* Diminuindo a espessura da borda */
-    border-radius: 5px;
-    background-color: #EADDCA;
-    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-    transition: .1s ease-in-out, .4s color;
-  }
-  
-  .btn-btn-secondary:active {
-    transform: translateX(0.1em) translateY(0.1em);
-    box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .btn-btn-secondary:hover {
-    background-color: #873B33; 
-    color: #EADDCA;              
-    border-color: #333;   
-    text-decoration: underline;   
-  }
-  
-  /* Remove o outline azul no clique (foco) */
-  .btn-btn-secondary:focus {
-    outline: none;  /* Remove a borda azul */
-    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
-    margin: 0 5px; /* Espaçamento entre os ícones */
-    padding: 0;
-    text-decoration: none;
-    transition: transform 0.2s; /* Efeito ao passar o mouse */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.credit-section {
+  margin-bottom: 40px;
+}
+
+.credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px; /* Adiciona padding à seção */
+  background-color: var(--cor-box-fundo); /* Fundo suave para destacar as fotos */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.person {
+  text-align: center;
+  margin: 20px;
+}
+
+.person h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: var(--cor-primaria); /* Cor dos nomes */
+}
+
+.person img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* Círculo perfeito para as fotos */
+  object-fit: cover;
+  border: 3px solid var(--cor-secundaria); /* Borda em torno das imagens */
+}
+
+.icons {
+  margin-top: 10px;
+}
+
+.icons a img {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.icons a {
+  display: inline-block;
+  margin: 0 5px; /* Espaçamento entre os ícones */
+  padding: 0;
+  text-decoration: none;
+  transition: transform 0.2s; /* Efeito ao passar o mouse */
 }
 
 .icons a:hover {
-    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+.btn {
+  outline: none; /* Remove outline padrão */
+  color: #EADDCA;
+  font-weight: bold;
+  padding: 0.8em 2em; /* Diminuindo ainda mais o padding */
+  border: 2px dashed #EADDCA; /* Diminuindo a espessura da borda */
+  border-radius: 5px;
+  background-color: #873B33;
+  box-shadow: 0 0 0 4px #873B33, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
 }
 
 
-@media (max-width: 480px) {
-    h1 {
-      font-size: 2.3em; /* Diminui ainda mais o tamanho do título */
-    }
-  
-    h2 {
-      font-size: 1.7em; /* Diminui ainda mais o tamanho do subtítulo */
-    }
-  
-    .container {
-      width: 95%; /* Aumenta ainda mais a largura */
-    }
-  
-    .person img {
-      width: 120px; /* Reduz ainda mais o tamanho das imagens */
-      height: 120px; /* Reduz ainda mais o tamanho das imagens */
-      
-    }
-  
-    .icons a img {
-      width: 35px; /* Reduz o tamanho dos ícones */
-      height: 35px; /* Reduz o tamanho dos ícones */
-      
-    }
-  }
 
-  .btn-btn-light-mt-2 {
-    outline: none; /* Remove outline padrão */
-    color: #EADDCA;
-    font-weight: bold;
-    margin-bottom: 13px;
-    padding: 1em 2.4em; /* Diminuindo ainda mais o padding */
-    border: 2px dashed #EADDCA; /* Diminuindo a espessura da borda */
-    border-radius: 5px;
-    background-color: #873B33;
-    box-shadow: 0 0 0 4px #873B33, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-    transition: .1s ease-in-out, .4s color;
-    text-decoration: none;
   
-    /* Sem position absolute */
-    margin-top: auto; /* Empurra o botão para o final do header */
-    margin-bottom: 10px; /* Distância da parte inferior */
-    margin-right: 4px;
-  }
-  
-  .btn-btn-light-mt-2:active {
+  .btn:active {
     transform: translateX(0.1em) translateY(0.1em);
     box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
   }
   
-  .btn-btn-light-mt-2:hover {
+  .btn:hover {
     background-color: #EADDCA; 
     color: #873B33;              
     border-color: #873B33;
-    text-decoration: underline;
   }
   
-  .btn-btn-light-mt-2:focus {
+  .btn:focus {
     outline: none;  /* Remove a borda azul */
     box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
   }

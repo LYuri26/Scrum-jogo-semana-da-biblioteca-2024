@@ -42,19 +42,78 @@ header {
   padding: 0 20px; /* Padding lateral para ajustar os conteúdos */
 }
 
-.mt-2{
-  outline: none;
-    color: #873B33;
-    font-weight: bold;
-    margin-bottom: 13px;
-    padding: 1em 4em;
-    border: 3px dashed #873B33;
-    border-radius: 5px;
-    background-color: #EADDCA;
-    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-    transition: .1s ease-in-out, .4s color;
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  text-align:center;
 }
 
+.btn-light {
+  outline: none; /* Remove outline padrão */
+  color: #EADDCA;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 0.8em 2em; /* Diminuindo ainda mais o padding */
+  border: 2px dashed #EADDCA; /* Diminuindo a espessura da borda */
+  border-radius: 5px;
+  background-color: #873B33;
+  box-shadow: 0 0 0 4px #873B33, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+
+  /* Sem position absolute */
+  margin-top: auto; /* Empurra o botão para o final do header */
+  margin-bottom: 10px; /* Distância da parte inferior */
+}
+
+.btn-light:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-light:hover {
+  background-color: #EADDCA; 
+  color: #873B33;              
+  border-color: #873B33;
+}
+
+.btn-light:focus {
+  outline: none;  /* Remove a borda azul */
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
+}
+
+
+.btn-iniciar {
+  outline: none; /* Remove outline padrão */
+  color: #873B33;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 1em 4em; /* Diminuindo ainda mais o padding */
+  border: 3px dashed #873B33; /* Diminuindo a espessura da borda */
+  border-radius: 5px;
+  background-color: #EADDCA;
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+}
+
+.btn-iniciar:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-iniciar:hover {
+  background-color: #873B33; 
+  color: #EADDCA;              
+  border-color: #333;   
+  text-decoration: underline;   
+}
+
+/* Remove o outline azul no clique (foco) */
+.btn-iniciar:focus {
+  outline: none;  /* Remove a borda azul */
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
+}
 header .left-column,
 header .middle-column,
 header .right-column {
@@ -98,11 +157,12 @@ header nav a:hover {
 }
 
 .card {
-  margin-top: 100px;
+  margin-top: 115px;
   margin-bottom: 1.5rem;
   background-color: #faeee938;
   backdrop-filter: blur(16px);
   color: #ffffffda;
+  border-radius: 10px;
 }
 
 .card img {
@@ -165,11 +225,11 @@ footer p {
   }
 
   .container {
-    width: 60%; /* Ajusta a largura em dispositivos médios */
+    width: 100%; /* Ajusta a largura em dispositivos médios */
 
-  .card {
-    margin-top: 50px; /* Reduz a margem superior */
-  }
+    .card {
+      margin-top: 160px; /* Reduz a margem superior para evitar sobreposição */
+    }
 
   .card img {
     max-width: 100%; /* Permite que a imagem ocupe toda a largura disponível */
@@ -196,10 +256,19 @@ footer p {
   }
 
   .card {
-    margin-top: 70px; /* Reduz ainda mais a margem superior */
+    margin-top: 120px; /* Reduz ainda mais a margem superior */
+    border-radius: 15px;
+  }
+  p.card-text{
+    font-size: 1.3em;
+  }
+
+  .card ul li {
+    font-size: 1.3em;
   }
 
   footer p {
-    font-size: 10px; /* Diminui o tamanho da fonte do rodapé */
+    font-size: 1.3em; /* Diminui o tamanho da fonte do rodapé */
   }
+}
 }

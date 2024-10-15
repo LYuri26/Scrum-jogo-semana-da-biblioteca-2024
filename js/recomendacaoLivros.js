@@ -11,19 +11,20 @@ const categorias = [
 ];
 
 // Pontuações para cada categoria
-const pontuacaoFiccaoPolicialTotal = [6, 9, 12]; // Exemplo de pontuação
+const pontuacaoFiccaoPolicialTotal = [6, 8, 10, 12]; // Exemplo de pontuação
 const pontuacaoAventuraTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoLiteraturaEspiritualTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoRomanceTotal = [6, 8, 10, 12]; // Exemplo de pontuação
 const pontuacaoFantasiaTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoHorrorTotal = [6, 12]; // Exemplo de pontuação
 const pontuacaoFiccaoCientificaTotal = [12]; // Exemplo de pontuação
-const pontuacaoMisterioTotal = [12]; // A variável já foi declarada corretamente
+const pontuacaoMisterioTotal = [6, 12]; // A variável já foi declarada corretamente
 
 // Livros recomendados por categoria
 const livrosFiccaoPolicial = [
   "Dexter: Um Assassino",
   "O Xangô de Baker Street",
+  "A queda",
   "Hannibal",
 ];
 const livrosAventura = [
@@ -31,21 +32,24 @@ const livrosAventura = [
   "Viagem ao Centro da Terra",
 ];
 const livrosLiteraturaEspiritual = ["A Cabana", "Depois, Silêncio"];
+
 const livrosRomance = [
   "O Melhor de Mim",
   "Um Homem de Sorte",
   "Vermelho Branco e Sangue Azul",
   "O Lado Bom da Vida",
 ];
+
 const livrosFantasia = ["Harry Potter", "Lua Nova"];
 const livrosHorror = ["Hyde", "Bird Box"];
 const livrosFiccaoCientifica = ["Avatar"];
-const livrosMisterio = ["O visitante inesperado"];
+const livrosMisterio = ["A Vingança", "O visitante inesperado"];
 
 // URLs para livros recomendados por categoria
 const urlsFiccaoPolicial = [
   "../html/livros/dexter-um-assassino.html",
   "../html/livros/o-xango-de-baker-street.html",
+  "../html/livros/a-queda.html",
   "../html/livros/hannibal.html",
 ];
 const urlsAventura = [
@@ -68,7 +72,7 @@ const urlsFantasia = [
 ];
 const urlsHorror = ["../html/livros/hyde.html", "../html/livros/bird-box.html"];
 const urlsFiccaoCientifica = ["../html/livros/avatar.html"];
-const urlsMisterio = ["../html/livros/o-visitante-inesperado.html"];
+const urlsMisterio = ["../html/livros/a-vinganca.html", "../html/livros/o-visitante-inesperado.html"];
 
 // Função para recomendar um livro com base na pontuação calculada
 function recomendarLivro(pontuacao) {

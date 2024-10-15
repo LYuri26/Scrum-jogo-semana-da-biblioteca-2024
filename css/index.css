@@ -314,7 +314,7 @@ footer p {
     align-items: center;
     justify-content: flex-start;
     max-width: 90%; /* Mantém uma boa largura para telas menores */
-    min-height: calc(80vh - 80px - 60px); /* Ajusta a altura para conter o conteúdo */
+    min-height: calc(75vh - 80px - 60px); /* Ajusta a altura para conter o conteúdo */
     margin: 130px auto; /* Centraliza o main e ajusta margens */
     padding: 15px; /* Espaçamento interno */
     box-sizing: border-box; /* Garante que o padding não ultrapasse o container */

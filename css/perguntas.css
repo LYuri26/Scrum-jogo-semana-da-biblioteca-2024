@@ -3,38 +3,70 @@
   padding: 0;
   box-sizing: border-box;
 }
-.btn-btn-ligh-mt-2 {
+
+.btn-light {
   outline: none; /* Remove outline padrão */
   color: #EADDCA;
   font-weight: bold;
   margin-bottom: 13px;
-  padding: 1em 2.4em; /* Diminuindo ainda mais o padding */
+  padding: 0.8em 2em; /* Diminuindo ainda mais o padding */
   border: 2px dashed #EADDCA; /* Diminuindo a espessura da borda */
   border-radius: 5px;
   background-color: #873B33;
   box-shadow: 0 0 0 4px #873B33, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
   transition: .1s ease-in-out, .4s color;
-  text-decoration: none;
 
   /* Sem position absolute */
   margin-top: auto; /* Empurra o botão para o final do header */
   margin-bottom: 10px; /* Distância da parte inferior */
-  margin-right: 4px;
 }
 
-.btn-btn-ligh-mt-2:active {
+.btn-light:active {
   transform: translateX(0.1em) translateY(0.1em);
   box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
 }
 
-.btn-btn-ligh-mt-2:hover {
+.btn-light:hover {
   background-color: #EADDCA; 
   color: #873B33;              
   border-color: #873B33;
-  text-decoration: underline;
 }
 
-.btn-btn-ligh-mt-2:focus {
+.btn-light:focus {
+  outline: none;  /* Remove a borda azul */
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
+}
+
+
+
+
+.btn-iniciar {
+  outline: none; /* Remove outline padrão */
+  color: #873B33;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 1em 4em; /* Diminuindo ainda mais o padding */
+  border: 3px dashed #873B33; /* Diminuindo a espessura da borda */
+  border-radius: 5px;
+  background-color: #EADDCA;
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+}
+
+.btn-iniciar:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-iniciar:hover {
+  background-color: #873B33; 
+  color: #EADDCA;              
+  border-color: #333;   
+  text-decoration: underline;   
+}
+
+/* Remove o outline azul no clique (foco) */
+.btn-iniciar:focus {
   outline: none;  /* Remove a borda azul */
   box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5); /* Mantém o estilo de sombra */
 }
@@ -419,15 +451,19 @@ footer p {
 }
 
 /* Media query para dispositivos menores que 768px */
+/* Media query para dispositivos menores que 768px */
 @media (max-width: 768px) {
   header {
     flex-direction: column; /* Muda a direção do header para coluna */
     height: auto; /* Permite que a altura do header se ajuste ao conteúdo */
     padding: 10px; /* Ajusta o padding */
+    position: static; /* Mantém o header estático no topo */
+    width: 100%; /* Garante que o header ocupe a largura total */
+    z-index: 1000; /* Mantém o header acima de outros elementos */
   }
 
   header h1 {
-    font-size: 2rem; /* Reduz o tamanho do título */
+    font-size: 2.5rem; /* Reduz o tamanho do título */
   }
 
   .btn-btn-ligh-mt-2 {
@@ -436,8 +472,10 @@ footer p {
   }
 
   #questionarioContainer {
+    margin-top: 20px; /* Ajusta a margem superior para separar do header */
     padding: 10px; /* Reduz o padding do container do questionário */
     min-height: 300px; /* Ajusta a altura mínima */
+    width: 95%;
   }
 
   /* Ajustes nos botões de navegação */
@@ -460,7 +498,7 @@ footer p {
 /* Media query para dispositivos muito pequenos (ex. celulares) */
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.5rem; /* Diminui ainda mais o tamanho do título */
+    font-size: 2rem; /* Diminui ainda mais o tamanho do título */
   }
 
   .btn-btn-ligh-mt-2 {
@@ -469,10 +507,12 @@ footer p {
   }
 
   #questionarioContainer {
-    margin-top: 80px; /* Ajusta a margem superior */
+    margin-top: 20px; /* Ajusta a margem superior para separar do header */
+    width: 95%;
   }
 
   .label-text {
     font-size: 18px; /* Diminui o tamanho do texto da label */
   }
 }
+
