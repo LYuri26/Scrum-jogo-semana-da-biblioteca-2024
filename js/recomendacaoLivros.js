@@ -90,10 +90,9 @@ const urlsMisterio = ["../html/livros/a-vinganca.html",
 function recomendarLivro(pontuacao) {
   console.log("Pontuação por Categoria:", pontuacao); // Exibe a pontuação de cada categoria no console
 
-  // Variáveis para determinar a categoria com a maior pontuação
   let categoriaFavorita = "";
   let maiorPontuacao = 0;
-  let empate = false; // Variável para detectar empate
+  let categoriasEmpatadas = []; // Armazena categorias com pontuações iguais
 
   // Itera sobre cada categoria para encontrar a que tem a maior pontuação
   for (let i = 0; i < categorias.length; i++) {
@@ -102,23 +101,33 @@ function recomendarLivro(pontuacao) {
 
     console.log(`Categoria: ${categoria}, Pontuação: ${categoriaPontuacao}`);
 
-    // Se a pontuação dessa categoria for maior que a maiorPontuacao, atualize
     if (categoriaPontuacao > maiorPontuacao) {
+      // Se essa categoria tiver a maior pontuação, atualize
       maiorPontuacao = categoriaPontuacao;
-      categoriaFavorita = categoria;
-      empate = false; // Resetar o empate se houver uma nova maior pontuação
+      categoriasEmpatadas = [categoria]; // Reinicia a lista com essa categoria
     } else if (categoriaPontuacao === maiorPontuacao) {
-      empate = true; // Se houver empate
+      // Se empatar, adicione a categoria à lista
+      categoriasEmpatadas.push(categoria);
     }
   }
 
-  console.log(`Categoria Favorita: ${categoriaFavorita}, Pontuação: ${maiorPontuacao}`);
+  console.log(`Categorias Empatadas: ${categoriasEmpatadas}, Pontuação: ${maiorPontuacao}`);
 
-  // Redireciona para a página de "não encontrado" se houver empate
-  if (empate) {
-    console.log("Empate encontrado, redirecionando para página de livro não encontrado.");
+  // Se houver empate entre 2 categorias, redireciona para "não encontrado"
+  if (categoriasEmpatadas.length === 2) {
+    console.log("Empate entre 2 categorias, redirecionando para página de livro não encontrado.");
     window.location.href = "../html/livros/nao-encontrado.html"; // Página genérica
     return;
+  }
+
+  // Se houver 3 ou mais categorias empatadas, sorteia uma delas
+  if (categoriasEmpatadas.length >= 3) {
+    const indiceSorteado = Math.floor(Math.random() * categoriasEmpatadas.length);
+    categoriaFavorita = categoriasEmpatadas[indiceSorteado]; // Sorteia uma categoria favorita
+    console.log(`Empate entre 3 ou mais categorias, categoria sorteada: ${categoriaFavorita}`);
+  } else {
+    // Se não houver 3 ou mais categorias empatadas, apenas usa a categoria favorita
+    categoriaFavorita = categoriasEmpatadas[0];
   }
 
   // Inicializa a variável para armazenar a URL da recomendação de livro
