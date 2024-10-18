@@ -38,7 +38,7 @@ console.log(`
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     `);
-    // Créditos
+// Créditos
 
 console.log("Créditos");
 
@@ -99,3 +99,16 @@ console.log("Lincoln Rosa Simão");
 // Instrutor
 console.log("Instrutor:");
 console.log("Lenon Yuri");
+
+//Maria
+console.log(`
+    opinião Maria Joaquina Dev Fullstack
+    Uma div com blur: OK
+    Letra serifada em aplicação web: Não ok, mas considerando que é algo que faz referência a livro, considero um OK.
+    Paleta de cores: Bonita, porém tom café. Poderia ter sido um tom mais claro pra fazer referência à página de um livro. Sem ok.
+    Efeito ao clicar no rádio: Legal, OK.
+    Setinha de navegação (Próximo/Finalizar) sobrepondo o texto no mobile: Não OK, precisa de ajuste.
+    O texto (sinopse) está centralizado: Ficaria melhor alinhado à esquerda ou justificado. Meio OK.
+    Nota da avaliação de uma tonta: 8, considerando que eles estão aprendendo.
+    Nota ao instrutor: 10000, porque ele se chama Yuri.
+    `);
