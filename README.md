@@ -30,6 +30,21 @@ O projeto utiliza **HTML**, **CSS** e **JavaScript** para criar uma experiência
 
 ### Créditos do Projeto
 
+#### HTML:
+- Davi Afonso
+- Anna Victórya Sousa Carmo de Oliveira
+- Ana Clara Alves Pereira
+- Anna Clara Felipe
+- Bruno Henrique da Silva Buriti
+- Gabriel da Silva Ribeiro
+- Ícaro Augusto Gonçalves Ferreira
+- Igor Gabriel da Silva Freitas
+- Pedro Lucas Silva
+- Soraya Pereira Gomes
+- Tatiane Rodrigues Pereira
+- Sofia Tresse Pires
+- Vinícius Henrique da Silva Buriti
+  
 #### CSS:
 - Sofia Tresse Pires
 - Pedro Lucas Silva
